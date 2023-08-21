@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <h1 id="title">MatBanka - Otvaranje Naloga PROMENI SVE U ENGLESKI</h1>
+    <p id="description">Molimo unesite vaše lične informacije kako bismo olakšali proces otvaranja naloga u našoj filijali.
+    </p>
+    <form id="survey-form">
+      <fieldset>
+      <label id="name-label" for="name">Ime i prezime: <input id="name" type="text" placeholder="npr. Pera Perić" required/>
+      </label>
+      <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="npr. peraperic@gmail.com" required/></label>
+      <label id="number-label" for="number">Godine: <input id="number" type="number" min="0" max="100" placeholder="npr. 32" required/>
+      </label>
+      </fieldset>
+      <fieldset>
+      <label for="dropdown">Da li ste strani ili domaći državljanin?
+        <select id="dropdown">
+          <option value="">(izaberi jednu opciju)</option>
+          <option value="1">Strani državljanin
+          </option>
+          <option value="2">Domaći državljanin</option>
+        </select>
+      </label>
+      <label for="fizičko">Fizičko Lice
+        <input value="fizičko" id="fizičko" type="radio" name="fizičko-pravno"/>
+      </label>
+      <label for="pravno">Pravno Lice
+        <input value="pravno" id="pravno" type="radio" name="fizičko-pravno"/>
+      </label>
+      </fieldset>
+      <fieldset>
+        <p>U koje svrhe planirate da koristite nalog? (Čekirajte sve opcije koje važe):</p>
+        <label>
+          <input id="slanje" value="slanje" type="checkbox"/> Primanje i slanje novca
+        </label>
+        <label>
+          <input value="cuvanje" type="checkbox"/>
+Čuvanje sredstava
+        </label>
+        <label>
+        <input value="placanje" type="checkbox"/>
+Plaćanje računa
+        </label>
+        <label>
+        <input value="stednja" type="checkbox"/>
+Štednja i Investiranje
+        </label>
+        <label>
+        <input value="kupovina" type="checkbox"/>
+Kupovina i Online Trgovina
+        </label>
+        <label>
+        <input value="poslovne" type="checkbox"/>
+Poslovne Transakcije
+        </label>
+        <label>
+        <input value="primanje" type="checkbox"/>
+Primanje Plate i Penzije
+        </label>
+        <label>
+        <input value="ostalo" type="checkbox"/>
+Ostalo
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="komentar"> Dodatni komentar:
+          <textarea id="komentar" type="textarea" placeholder="(opciono)"></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Pošalji">
+    </form>
+  </body>
+</html>
