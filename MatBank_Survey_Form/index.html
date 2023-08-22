@@ -1,78 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Survey Form</title>
-    <link rel="stylesheet" href="styles.css"/>
-  </head>
-  <body>
-    <h1 id="title">MatBanka - Otvaranje Naloga PROMENI SVE U ENGLESKI</h1>
-    <p id="description">Molimo unesite vaše lične informacije kako bismo olakšali proces otvaranja naloga u našoj filijali.
-    </p>
-    <form id="survey-form">
-      <fieldset>
-      <label id="name-label" for="name">Ime i prezime: <input id="name" type="text" placeholder="npr. Pera Perić" required/>
-      </label>
-      <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="npr. peraperic@gmail.com" required/></label>
-      <label id="number-label" for="number">Godine: <input id="number" type="number" min="0" max="100" placeholder="npr. 32" required/>
-      </label>
-      </fieldset>
-      <fieldset>
-      <label for="dropdown">Da li ste strani ili domaći državljanin?
+<head>
+  <meta charset="utf-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <h1 id="title">MatBank - Account Opening</h1>
+  <p id="description">Please enter your personal information to expedite the account opening process when you arrive at our branch.</p>
+  <form id="survey-form">
+    <fieldset>
+      <label id="name-label" for="name">Full Name: <input id="name" type="text" placeholder="e.g. John Doe" required/></label>
+      <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="e.g. johndoe@gmail.com" required/></label>
+      <label id="number-label" for="number">Age: <input id="number" type="number" min="0" max="100" placeholder="e.g. 32" required/></label>
+    </fieldset>
+    <fieldset>
+      <p>Are you a foreign or domestic citizen?
+      </p>
+      <label for="dropdown">
         <select id="dropdown">
-          <option value="">(izaberi jednu opciju)</option>
-          <option value="1">Strani državljanin
-          </option>
-          <option value="2">Domaći državljanin</option>
+          <option value="">(select an option)</option>
+          <option value="1">Foreign Citizen</option>
+          <option value="2">Domestic Citizen</option>
         </select>
       </label>
-      <label for="fizičko">Fizičko Lice
-        <input value="fizičko" id="fizičko" type="radio" name="fizičko-pravno"/>
+      <label for="individual">
+        <input value="individual" id="individual" type="radio" name="account-type"/> Individual Account
       </label>
-      <label for="pravno">Pravno Lice
-        <input value="pravno" id="pravno" type="radio" name="fizičko-pravno"/>
+      <label for="business">
+        <input value="business" id="business" type="radio" name="account-type"/> Business Account
       </label>
-      </fieldset>
-      <fieldset>
-        <p>U koje svrhe planirate da koristite nalog? (Čekirajte sve opcije koje važe)</p>
-        <label>
-          <input id="slanje" value="slanje" type="checkbox"/> Primanje i slanje novca
-        </label>
-        <label>
-          <input value="cuvanje" type="checkbox"/>
-Čuvanje sredstava
-        </label>
-        <label>
-        <input value="placanje" type="checkbox"/>
-Plaćanje računa
-        </label>
-        <label>
-        <input value="stednja" type="checkbox"/>
-Štednja i Investiranje
-        </label>
-        <label>
-        <input value="kupovina" type="checkbox"/>
-Kupovina i Online Trgovina
-        </label>
-        <label>
-        <input value="poslovne" type="checkbox"/>
-Poslovne Transakcije
-        </label>
-        <label>
-        <input value="primanje" type="checkbox"/>
-Primanje Plate i Penzije
-        </label>
-        <label>
-        <input value="ostalo" type="checkbox"/>
-Ostalo
-        </label>
-      </fieldset>
-      <fieldset>
-        <label for="komentar"> Dodatni komentar:
-          <textarea id="komentar" type="textarea" placeholder="(opciono)"></textarea>
-        </label>
-      </fieldset>
-      <input id="submit" type="submit" value="Pošalji">
-    </form>
-  </body>
+    </fieldset>
+    <fieldset>
+      <p>Which purposes do you plan on using the account for? (Check all that apply):</p>
+      <label>
+        <input id="sending" value="sending" type="checkbox"/> Sending and Receiving Money
+      </label>
+      <label>
+        <input value="saving" type="checkbox"/> Saving Funds
+      </label>
+      <label>
+        <input value="payment" type="checkbox"/> Bill Payment
+      </label>
+      <label>
+        <input value="investment" type="checkbox"/> Saving and Investment
+      </label>
+      <label>
+        <input value="shopping" type="checkbox"/> Shopping and Online Transactions
+      </label>
+      <label>
+        <input value="business" type="checkbox"/> Business Transactions
+      </label>
+      <label>
+        <input value="salary" type="checkbox"/> Receiving Salary and Benefits
+      </label>
+      <label>
+        <input value="other" type="checkbox"/> Other
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="comment">Additional Comment:
+        <textarea id="comment" placeholder="(optional)"></textarea>
+      </label>
+    </fieldset>
+    <input id="submit" type="submit" value="Submit">
+  </form>
+</body>
 </html>

@@ -1,9 +1,22 @@
+body {
+  font-family: Tahoma;
+  background-image: url(https://replicate.delivery/pbxt/gRuRNuHTSSI1O1XyuvJ7oyJGSUgpdasRJviGvVc9nXcdvKXE/out-0.png); 
+  color: white;
+}
+
 h1 {
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    font-size: 18px;
-    margin: 8;
-  }
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+label, p {
+  display: block;
+  font-size: 19px;
+  margin: 9;
+}
+
+fieldset {
+  border: none;
+  border-top: 1px solid;
+}
