@@ -6,12 +6,13 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+  <div>
   <h1 id="title">MatBank - Account Opening</h1>
   <p id="description">Please enter your personal information to expedite the account opening process when you arrive at our branch.</p>
   <form id="survey-form">
     <fieldset>
       <label id="name-label" for="name">Full Name: <input id="name" type="text" placeholder="e.g. John Doe" required/></label>
-      <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="e.g. johndoe@gmail.com" required/></label>
+      <label id="email-label" for="email">Email: <input id="email" type="text" placeholder="e.g. johndoe@gmail.com" required/></label>
       <label id="number-label" for="number">Age: <input id="number" type="number" min="0" max="100" placeholder="e.g. 32" required/></label>
     </fieldset>
     <fieldset>
@@ -34,25 +35,25 @@
     <fieldset>
       <p>Which purposes do you plan on using the account for? (Check all that apply):</p>
       <label>
-        <input id="sending" value="sending" type="checkbox"/> Sending and Receiving Money
+        <input id="managment" value="managment" type="checkbox"/> Transaction Management
       </label>
       <label>
-        <input value="saving" type="checkbox"/> Saving Funds
+        <input value="savings" type="checkbox"/> Savings and Investment
       </label>
       <label>
         <input value="payment" type="checkbox"/> Bill Payment
       </label>
       <label>
-        <input value="investment" type="checkbox"/> Saving and Investment
+        <input value="salary" type="checkbox"/> Salary and Income
       </label>
       <label>
-        <input value="shopping" type="checkbox"/> Shopping and Online Transactions
+        <input value="shopping" type="checkbox"/> Online Shopping
       </label>
       <label>
         <input value="business" type="checkbox"/> Business Transactions
       </label>
       <label>
-        <input value="salary" type="checkbox"/> Receiving Salary and Benefits
+        <input value="salary" type="checkbox"/> Retirement Planning
       </label>
       <label>
         <input value="other" type="checkbox"/> Other
@@ -63,7 +64,8 @@
         <textarea id="comment" placeholder="(optional)"></textarea>
       </label>
     </fieldset>
-    <input id="submit" type="submit" value="Submit">
+    <input class="submit" id="submit" type="submit" value="Submit">
   </form>
+  </div>
 </body>
 </html>
