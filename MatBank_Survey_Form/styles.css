@@ -44,7 +44,7 @@ fieldset {
   border-top: 2px solid;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], input[type="email"] {
   width: 100%;
   height: 30px;
   margin: 5px;
