@@ -1,13 +1,13 @@
 body {
   width: 100%;
   font-family: Tahoma;
-  background-image: url(https://ennwjiitmiqwdrgxkevm.supabase.co/storage/v1/object/public/images/public/tyuqrp3bez533ewqityd4eu4we.png); 
+  background-image: url(https://ennwjiitmiqwdrgxkevm.supabase.co/storage/v1/object/public/images/public/tyuqrp3bez533ewqityd4eu4we.png);
   color: white;
-  text-shadow: 
-  0 0 3px #000,
-  0 0 3px #000,
-  0 0 3px #000,
-  0 0 3px #000;  
+  text-shadow:
+    0 0 3px #000,
+    0 0 3px #000,
+    0 0 3px #000,
+    0 0 3px #000;
   place-items: center;
   display: flex;
   justify-content: center;
@@ -24,7 +24,9 @@ h1 {
   margin-bottom: 30px;
 }
 
-label, p, textarea {
+label,
+p,
+textarea {
   display: block;
   font-size: 19px;
   margin: 10 10 10 10;
@@ -44,7 +46,9 @@ fieldset {
   border-top: 2px solid;
 }
 
-input[type="text"], input[type="number"], input[type="email"] {
+input[type="text"],
+input[type="number"],
+input[type="email"] {
   width: 100%;
   height: 30px;
   margin: 5px;

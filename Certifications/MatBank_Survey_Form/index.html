@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Survey Form</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div>
-  <h1 id="title">MatBank - Account Opening</h1>
-  <p id="description">Please enter your personal information to expedite the account opening process when you arrive at our branch.</p>
-  <form id="survey-form">
-    <fieldset>
-      <label id="name-label" for="name">Full Name: <input id="name" type="text" placeholder="e.g. John Doe" required/></label>
-      <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="e.g. johndoe@gmail.com" required/></label>
-      <label id="number-label" for="number">Age: <input id="number" type="number" min="0" max="100" placeholder="e.g. 32" required/></label>
-    </fieldset>
-    <fieldset>
-      <p>Are you a foreign or domestic citizen?
-      </p>
-      <label for="dropdown">
-        <select id="dropdown">
-          <option value="">(select an option)</option>
-          <option value="1">Foreign Citizen</option>
-          <option value="2">Domestic Citizen</option>
-        </select>
-      </label>
-      <label for="individual">
-        <input value="individual" id="individual" type="radio" name="account-type"/> Individual Account
-      </label>
-      <label for="business">
-        <input value="business" id="business" type="radio" name="account-type"/> Business Account
-      </label>
-    </fieldset>
-    <fieldset>
-      <p>Which purposes do you plan on using the account for? (Check all that apply):</p>
-      <label>
-        <input id="managment" value="managment" type="checkbox"/> Transaction Management
-      </label>
-      <label>
-        <input value="savings" type="checkbox"/> Savings and Investment
-      </label>
-      <label>
-        <input value="payment" type="checkbox"/> Bill Payment
-      </label>
-      <label>
-        <input value="salary" type="checkbox"/> Salary and Income
-      </label>
-      <label>
-        <input value="shopping" type="checkbox"/> Online Shopping
-      </label>
-      <label>
-        <input value="business" type="checkbox"/> Business Transactions
-      </label>
-      <label>
-        <input value="salary" type="checkbox"/> Retirement Planning
-      </label>
-      <label>
-        <input value="other" type="checkbox"/> Other
-      </label>
-    </fieldset>
-    <fieldset>
-      <label for="comment">Additional Comment:
-        <textarea id="comment" placeholder="(optional)"></textarea>
-      </label>
-    </fieldset>
-    <input class="submit" id="submit" type="submit" value="Submit">
-  </form>
+    <h1 id="title">MatBank - Account Opening</h1>
+    <p id="description">Please enter your personal information to expedite the account opening process when you arrive
+      at our branch.</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Full Name: <input id="name" type="text" placeholder="e.g. John Doe"
+            required /></label>
+        <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="e.g. johndoe@gmail.com"
+            required /></label>
+        <label id="number-label" for="number">Age: <input id="number" type="number" min="0" max="100"
+            placeholder="e.g. 32" required /></label>
+      </fieldset>
+      <fieldset>
+        <p>Are you a foreign or domestic citizen?
+        </p>
+        <label for="dropdown">
+          <select id="dropdown">
+            <option value="">(select an option)</option>
+            <option value="1">Foreign Citizen</option>
+            <option value="2">Domestic Citizen</option>
+          </select>
+        </label>
+        <label for="individual">
+          <input value="individual" id="individual" type="radio" name="account-type" /> Individual Account
+        </label>
+        <label for="business">
+          <input value="business" id="business" type="radio" name="account-type" /> Business Account
+        </label>
+      </fieldset>
+      <fieldset>
+        <p>Which purposes do you plan on using the account for? (Check all that apply):</p>
+        <label>
+          <input id="managment" value="managment" type="checkbox" /> Transaction Management
+        </label>
+        <label>
+          <input value="savings" type="checkbox" /> Savings and Investment
+        </label>
+        <label>
+          <input value="payment" type="checkbox" /> Bill Payment
+        </label>
+        <label>
+          <input value="salary" type="checkbox" /> Salary and Income
+        </label>
+        <label>
+          <input value="shopping" type="checkbox" /> Online Shopping
+        </label>
+        <label>
+          <input value="business" type="checkbox" /> Business Transactions
+        </label>
+        <label>
+          <input value="salary" type="checkbox" /> Retirement Planning
+        </label>
+        <label>
+          <input value="other" type="checkbox" /> Other
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="comment">Additional Comment:
+          <textarea id="comment" placeholder="(optional)"></textarea>
+        </label>
+      </fieldset>
+      <input class="submit" id="submit" type="submit" value="Submit">
+    </form>
   </div>
 </body>
+
 </html>
