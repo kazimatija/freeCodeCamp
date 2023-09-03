@@ -1,0 +1,9 @@
+body {
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
