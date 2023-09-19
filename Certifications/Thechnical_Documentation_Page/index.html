@@ -47,13 +47,53 @@
         <header>
           2. Database Managment
         </header>
-        <h4>Creating Databases</h4>
+        <h4>2.1. Creating Databases</h4>
         <p>
-
+          In SQL, a database is a structured collection of data organized into tables, views, and other objects. Before you can work with data, you need to create a database to store it. Here's how to create a database in SQL:
         </p>
         <code>
-
+          CREATE DATABASE database_name;
         </code>
+        <ul>
+          <li>
+            CREATE DATABASE: This SQL statement is used to create a new database. You specify the name of the database you want to create. The database_name should be unique within your database management system (DBMS).
+          </li>
+        </ul>
+        <h4>2.2. Data Types:</h4>
+        <p>SQL supports various data types that define the kind of data a column can hold. Choosing the appropriate data type for each column is crucial for efficient data storage and retrieval. Here are some common data types in SQL:</p>
+        <ul>
+          <li>INTEGER: Stores whole numbers.</li>
+          <li>VARCHAR(size): Variable-length character strings with a specified maximum size.</li>
+          <li>DATE: Stores date values (e.g., '2023-09-19').</li>
+          <li>DECIMAL(precision, scale): Exact numeric values with a specified number of digits and decimal places.</li>
+          <li>BOOLEAN: Stores true or false values.</li>
+        </ul>
+        <p>When creating tables, you'll need to specify the data type for each column to ensure that the database correctly stores and interprets the data.</p>
+        <h4>2.3. Creating Tables:</h4>
+        <p>Tables are the primary containers for storing data in a database. To create a table, you use the CREATE TABLE statement. Here's a basic example of creating a table:</p>
+        <code>CREATE TABLE employees (
+            employee_id INTEGER PRIMARY KEY,
+            first_name VARCHAR(50),
+            last_name VARCHAR(50),
+            hire_date DATE
+            );</code>
+        <ul>
+          <li>CREATE TABLE: This statement creates a new table named "employees."</li>
+          <li>Inside the parentheses, you define the columns of the table along with their data types. In this example, we have columns for employee ID, first name, last name, and hire date.</li>
+          <li>The PRIMARY KEY constraint is used to ensure that the "employee_id" column contains unique values for each row. It serves as the table's primary key, which can be used to uniquely identify each employee.</li>
+        </ul>
+        <h4>2.4. Defining Relationships</h4>
+        <p>In a relational database, tables are often related to one another. You can establish these relationships using foreign keys. A foreign key is a column or set of columns in one table that refers to the primary key of another table. This enforces referential integrity and ensures data consistency.</p>
+        <p>Here's an example of creating a table with a foreign key relationship:</p>
+        <code>CREATE TABLE orders (
+            order_id INTEGER PRIMARY KEY,
+            customer_id INTEGER,
+            order_date DATE,
+            FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
+            ) </code>
+        <ul>
+          <li>In this example, the "orders" table has a "customer_id" column that references the "customer_id" column in the "customers" table. This relationship ensures that orders can only be associated with existing customers.</li>
+        </ul>
       </section>
       <section class="main-section" id="Querying_Data">
         <header>
