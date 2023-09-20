@@ -47,11 +47,14 @@
         commands:</p>
       <ol>
         <li>SELECT: Used to retrieve data from one or more tables. Example:
-          <code>SELECT first_name, last_name FROM employees;</code></li>
+          <code>SELECT first_name, last_name FROM employees;</code>
+        </li>
         <li>INSERT: Adds new records to a table. Example:
-          <code>INSERT INTO products (product_name, price) VALUES ('Laptop', 999.99);</code></li>
+          <code>INSERT INTO products (product_name, price) VALUES ('Laptop', 999.99);</code>
+        </li>
         <li>UPDATE: Modifies existing records in a table. Example:
-          <code>UPDATE customers SET email = 'newemail@example.com' WHERE customer_id = 123;</code></li>
+          <code>UPDATE customers SET email = 'newemail@example.com' WHERE customer_id = 123;</code>
+        </li>
         <li>DELETE: Removes records from a table. Example: <code>DELETE FROM orders WHERE order_id = 456;</code></li>
       </ol>
     </section>
@@ -256,15 +259,30 @@
     </section>
     <section class="main-section" id="Advanced_SQL">
       <header>
-        Advanced SQL
+        5. Advanced SQL
       </header>
+      <h4>5.1. Subqueries:</h4>
       <p>
-
+        Subqueries, also known as nested queries, are a powerful feature of SQL. They allow you to embed one query
+        within another. Subqueries are used for various purposes, such as data retrieval, filtering, and comparisons.
       </p>
+      <p>Example of a subquery for data retrieval:</p>
       <code>
-
-        </code>
-    </section>
+        SELECT product_name
+        FROM products
+        WHERE category_id IN (SELECT category_id FROM categories WHERE category_name = 'Electronics');
+      </code>
+      <p>In this example, the subquery retrieves the category_id for the 'Electronics' category, and the main query
+        retrieves product names belonging to that category.
+      </p>
+      <h4>5.2. Views:</h4>
+      <p>SQL views are virtual tables that store the results of a SELECT query. Views simplify complex queries and provide a way to present specific subsets of data to users without exposing the underlying table structure.</p>
+      <p>Example of creating a view:</p>
+      <code>CREATE VIEW customer_contacts AS
+        SELECT customer_id, first_name, last_name, email
+        FROM customers;</code>
+      <p>You can then query the "customer_contacts" view just like you would a table, even though it doesn't store data itself.</p>
+      </section>
   </main>
 </body>
 
