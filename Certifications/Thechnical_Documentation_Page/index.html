@@ -97,13 +97,75 @@
       </section>
       <section class="main-section" id="Querying_Data">
         <header>
-          Querying Data
+          3. Querying Data
         </header>
+        <h4>3.1. Retrieving Data</h4>
         <p>
-
+          SQL's primary function is to retrieve data from databases. The foundation of data retrieval lies in the SELECT statement:
         </p>
         <code>
-
+          SELECT column1, column2
+          FROM table
+          WHERE condition;
+        </code>
+        <ul>
+          <li>SELECT: This keyword specifies the columns you want in the result set. You can use * to select all columns.</li>
+          <li>FROM: Specifies the table or tables from which you want to retrieve data.</li>
+          <li>WHERE: An optional clause for filtering data based on specified conditions. It includes only the rows that meet the criteria.</li>
+        </ul>
+        <h4>Filtering, Sorting and Aggregating:</h4>
+        <ul>
+          <li>Filtering: Use operators like =, <, >, etc., to filter data based on specific values or ranges.</li>
+        </ul>
+        <p>Example:</p>
+        <code>SELECT product_name, price FROM products WHERE price < 50;</code>
+        <ul>
+          <li>Sorting: Arrange the result set using the ORDER BY clause.</li>
+        </ul>
+        <p>Example:</p>
+        <code>SELECT employee_name, salary FROM employees ORDER BY salary DESC;</code>
+        <ul>
+          <li>Aggregating: SQL offers aggregate functions like COUNT, SUM, AVG, to perform calculations on grouped data.</li>
+        </ul>
+        <p>Example:</p>
+        <code>SELECT department, AVG(salary) FROM employees GROUP BY department;</code>
+        <h4>JOIN Clauses</h4>
+        <p>When data is distributed across multiple tables, SQL allows you to combine them using JOIN clauses. Here are some common types:</p>
+        <ul>
+          <li>INNER JOIN: Retrieves rows that have matching values in both tables.</li>
+        </ul>
+        <p>Example:</p>
+        <code>
+          SELECT orders.order_id, customers.customer_name
+          FROM orders
+          INNER JOIN customers ON orders.customer_id = customers.customer_id;
+        </code>
+        <ul>
+          <li>LEFT JOIN (or LEFT OUTER JOIN): Retrieves all rows from the left table and the matching rows from the right table. If there's no match, it still includes the left table's rows.</li>
+        </ul>
+        <p>Example:</p>
+        <code>
+          SELECT customers.customer_name, orders.order_date
+          FROM customers
+          LEFT JOIN orders ON customers.customer_id = orders.customer_id;
+        </code>
+        <ul>
+          <li>RIGHT JOIN (or RIGHT OUTER JOIN): Similar to LEFT JOIN but includes all rows from the right table.</li>
+        </ul>
+        <p>Example:</p>
+        <code>
+          SELECT customers.customer_name, orders.order_date
+          FROM customers
+          RIGHT JOIN orders ON customers.customer_id = orders.customer_id;
+        </code>
+        <ul>
+          <li>FULL JOIN (or FULL OUTER JOIN): Retrieves all rows when there is a match in either the left or the right table.</li>
+        </ul>
+        <p>Example:</p>
+        <code>
+          SELECT customers.customer_name, orders.order_date
+          FROM customers
+          FULL JOIN orders ON customers.customer_id = orders.customer_id;
         </code>
       </section>
       <section class="main-section" id="Data Modification">
