@@ -10,9 +10,9 @@
 
 <body>
   <main id="main-doc">
-    <section class="main-section" id="Introduction">
+    <section class="main-section" id="0._Introduction">
       <header>
-        Introduction
+        0. Introduction
       </header>
       <p>
         SQL (Structured Query Language) is a powerful tool for managing and manipulating relational databases. Whether
@@ -21,11 +21,11 @@
         data modification, advanced topics, security, performance optimization, error handling, and troubleshooting.
       </p>
     </section>
-    <section class="main-section" id="SQL_Basics">
+    <section class="main-section" id="1._SQL_Basics">
       <header>
-        SQL Basics
+        1. SQL Basics
       </header>
-      <h4>Basic SQL Query:</h4>
+      <h4>1.1. Basic SQL Query:</h4>
       <p>
         At its core, SQL is all about querying data from databases. The most basic SQL statement is the SELECT
         statement, which retrieves data from one or more tables. Here's a breakdown of a basic SQL query:
@@ -42,7 +42,7 @@
         <li>WHERE: Optional clause that allows you to filter the data based on a specified condition. The condition is
           used to include only the rows that meet specific criteria.</li>
       </ul>
-      <h4>Common SQL Commands:</h4>
+      <h4>1.2. Common SQL Commands:</h4>
       <p>SQL provides a set of powerful commands for interacting with databases. Here are some of the most common SQL
         commands:</p>
       <ol>
@@ -58,7 +58,7 @@
         <li>DELETE: Removes records from a table. Example: <code>DELETE FROM orders WHERE order_id = 456;</code></li>
       </ol>
     </section>
-    <section class="main-section" id="Database_Managment">
+    <section class="main-section" id="2._Database_Managment">
       <header>
         2. Database Managment
       </header>
@@ -122,7 +122,7 @@
         </li>
       </ul>
     </section>
-    <section class="main-section" id="Querying_Data">
+    <section class="main-section" id="3._Querying_Data">
       <header>
         3. Querying Data
       </header>
@@ -143,7 +143,7 @@
         <li>WHERE: An optional clause for filtering data based on specified conditions. It includes only the rows that
           meet the criteria.</li>
       </ul>
-      <h4>Filtering, Sorting and Aggregating:</h4>
+      <h4>3.2. Filtering, Sorting and Aggregating:</h4>
       <ul>
         <li>Filtering: Use operators like =, <,>, etc., to filter data based on specific values or ranges.</li>
       </ul>
@@ -160,7 +160,7 @@
       </ul>
       <p>Example:</p>
       <code>SELECT department, AVG(salary) FROM employees GROUP BY department;</code>
-      <h4>JOIN Clauses</h4>
+      <h4>3.3. JOIN Clauses</h4>
       <p>When data is distributed across multiple tables, SQL allows you to combine them using JOIN clauses. Here are
         some common types:</p>
       <ul>
@@ -202,7 +202,7 @@
           FULL JOIN orders ON customers.customer_id = orders.customer_id;
         </code>
     </section>
-    <section class="main-section" id="Data Modification">
+    <section class="main-section" id="4._Data_Modification">
       <header>
         4. Data Modification
       </header>
@@ -240,7 +240,7 @@
         SET email = 'newemail@example.com'
         WHERE customer_id = 123;
       </code>
-      <h4>Deleting Data:</h4>
+      <h4>4.3. Deleting Data:</h4>
       <p>The DELETE FROM statement removes records from a table:</p>
       <code>
         DELETE FROM table_name
@@ -257,7 +257,7 @@
       </code>
       <p>It's crucial to exercise caution when using DELETE, as it permanently removes data from the database.</p>
     </section>
-    <section class="main-section" id="Advanced_SQL">
+    <section class="main-section" id="5._Advanced_SQL">
       <header>
         5. Advanced SQL
       </header>
@@ -284,6 +284,18 @@
         FROM customers;</code>
       <p>You can then query the "customer_contacts" view just like you would a table, even though it doesn't store data
         itself.</p>
+    </section>
+    <section class="main-section" id="6._References">
+      <header>
+        6. References
+      </header>
+      <p>For further learning and reference, here are some recommended resources:</p>
+      <ul>
+        <li>SQLZoo: Interactive SQL tutorials.</li>
+        <li></li>SQL.org: Comprehensive SQL documentation</li>
+        <li></li>SQL Performance Explained: Book on SQL performance optimization</li>
+        <li></li>SQL Server Central: Community and articles on SQL topics</li>
+      </ul>
     </section>
   </main>
 </body>
