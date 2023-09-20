@@ -1,195 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQL Technical Documentation</title>
-    <link rel="stylesheet" href="styles.css"/>
-  </head>
-  <body>
-    <main id="main-doc">
-      <section class="main-section" id="Introduction">
-        <header>
-          Introduction
-        </header>
-        <p>
-          SQL (Structured Query Language) is a powerful tool for managing and manipulating relational databases. Whether you're a database administrator, developer, or data analyst, understanding SQL is essential for working with structured data. This documentation will guide you through SQL fundamentals, database management, querying data, data modification, advanced topics, security, performance optimization, error handling, and troubleshooting.
-        </p>
-      </section>
-      <section class="main-section" id="SQL_Basics">
-        <header>
-          SQL Basics
-        </header>
-        <h4>Basic SQL Query:</h4>
-        <p>
-          At its core, SQL is all about querying data from databases. The most basic SQL statement is the SELECT statement, which retrieves data from one or more tables. Here's a breakdown of a basic SQL query:
-        </p>
-        <code>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Technical Documentation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>
+        Introduction
+      </header>
+      <p>
+        SQL (Structured Query Language) is a powerful tool for managing and manipulating relational databases. Whether
+        you're a database administrator, developer, or data analyst, understanding SQL is essential for working with
+        structured data. This documentation will guide you through SQL fundamentals, database management, querying data,
+        data modification, advanced topics, security, performance optimization, error handling, and troubleshooting.
+      </p>
+    </section>
+    <section class="main-section" id="SQL_Basics">
+      <header>
+        SQL Basics
+      </header>
+      <h4>Basic SQL Query:</h4>
+      <p>
+        At its core, SQL is all about querying data from databases. The most basic SQL statement is the SELECT
+        statement, which retrieves data from one or more tables. Here's a breakdown of a basic SQL query:
+      </p>
+      <code>
           SELECT column1, column2
           FROM table
           WHERE condition;
         </code>
-        <ul>
-          <li>SELECT: This keyword specifies the columns you want to retrieve in the result set. You can use * to select all columns.</li>
-          <li>FROM: Specifies the table or tables from which you want to retrieve data.</li>
-          <li>WHERE: Optional clause that allows you to filter the data based on a specified condition. The condition is used to include only the rows that meet specific criteria.</li>
-        </ul>
-        <h4>Common SQL Commands:</h4>
-        <p>SQL provides a set of powerful commands for interacting with databases. Here are some of the most common SQL commands:</p>
-        <ol>
-          <li>SELECT: Used to retrieve data from one or more tables. Example: <code>SELECT first_name, last_name FROM employees;</code></li>
-          <li>INSERT: Adds new records to a table. Example: <code>INSERT INTO products (product_name, price) VALUES ('Laptop', 999.99);</code></li>
-          <li>UPDATE: Modifies existing records in a table. Example: <code>UPDATE customers SET email = 'newemail@example.com' WHERE customer_id = 123;</code></li>
-          <li>DELETE: Removes records from a table. Example: <code>DELETE FROM orders WHERE order_id = 456;</code></li>
-        </ol>
-      </section>
-      <section class="main-section" id="Database_Managment">
-        <header>
-          2. Database Managment
-        </header>
-        <h4>2.1. Creating Databases</h4>
-        <p>
-          In SQL, a database is a structured collection of data organized into tables, views, and other objects. Before you can work with data, you need to create a database to store it. Here's how to create a database in SQL:
-        </p>
-        <code>
+      <ul>
+        <li>SELECT: This keyword specifies the columns you want to retrieve in the result set. You can use * to select
+          all columns.</li>
+        <li>FROM: Specifies the table or tables from which you want to retrieve data.</li>
+        <li>WHERE: Optional clause that allows you to filter the data based on a specified condition. The condition is
+          used to include only the rows that meet specific criteria.</li>
+      </ul>
+      <h4>Common SQL Commands:</h4>
+      <p>SQL provides a set of powerful commands for interacting with databases. Here are some of the most common SQL
+        commands:</p>
+      <ol>
+        <li>SELECT: Used to retrieve data from one or more tables. Example:
+          <code>SELECT first_name, last_name FROM employees;</code></li>
+        <li>INSERT: Adds new records to a table. Example:
+          <code>INSERT INTO products (product_name, price) VALUES ('Laptop', 999.99);</code></li>
+        <li>UPDATE: Modifies existing records in a table. Example:
+          <code>UPDATE customers SET email = 'newemail@example.com' WHERE customer_id = 123;</code></li>
+        <li>DELETE: Removes records from a table. Example: <code>DELETE FROM orders WHERE order_id = 456;</code></li>
+      </ol>
+    </section>
+    <section class="main-section" id="Database_Managment">
+      <header>
+        2. Database Managment
+      </header>
+      <h4>2.1. Creating Databases</h4>
+      <p>
+        In SQL, a database is a structured collection of data organized into tables, views, and other objects. Before
+        you can work with data, you need to create a database to store it. Here's how to create a database in SQL:
+      </p>
+      <code>
           CREATE DATABASE database_name;
         </code>
-        <ul>
-          <li>
-            CREATE DATABASE: This SQL statement is used to create a new database. You specify the name of the database you want to create. The database_name should be unique within your database management system (DBMS).
-          </li>
-        </ul>
-        <h4>2.2. Data Types:</h4>
-        <p>SQL supports various data types that define the kind of data a column can hold. Choosing the appropriate data type for each column is crucial for efficient data storage and retrieval. Here are some common data types in SQL:</p>
-        <ul>
-          <li>INTEGER: Stores whole numbers.</li>
-          <li>VARCHAR(size): Variable-length character strings with a specified maximum size.</li>
-          <li>DATE: Stores date values (e.g., '2023-09-19').</li>
-          <li>DECIMAL(precision, scale): Exact numeric values with a specified number of digits and decimal places.</li>
-          <li>BOOLEAN: Stores true or false values.</li>
-        </ul>
-        <p>When creating tables, you'll need to specify the data type for each column to ensure that the database correctly stores and interprets the data.</p>
-        <h4>2.3. Creating Tables:</h4>
-        <p>Tables are the primary containers for storing data in a database. To create a table, you use the CREATE TABLE statement. Here's a basic example of creating a table:</p>
-        <code>CREATE TABLE employees (
+      <ul>
+        <li>
+          CREATE DATABASE: This SQL statement is used to create a new database. You specify the name of the database you
+          want to create. The database_name should be unique within your database management system (DBMS).
+        </li>
+      </ul>
+      <h4>2.2. Data Types:</h4>
+      <p>SQL supports various data types that define the kind of data a column can hold. Choosing the appropriate data
+        type for each column is crucial for efficient data storage and retrieval. Here are some common data types in
+        SQL:</p>
+      <ul>
+        <li>INTEGER: Stores whole numbers.</li>
+        <li>VARCHAR(size): Variable-length character strings with a specified maximum size.</li>
+        <li>DATE: Stores date values (e.g., '2023-09-19').</li>
+        <li>DECIMAL(precision, scale): Exact numeric values with a specified number of digits and decimal places.</li>
+        <li>BOOLEAN: Stores true or false values.</li>
+      </ul>
+      <p>When creating tables, you'll need to specify the data type for each column to ensure that the database
+        correctly stores and interprets the data.</p>
+      <h4>2.3. Creating Tables:</h4>
+      <p>Tables are the primary containers for storing data in a database. To create a table, you use the CREATE TABLE
+        statement. Here's a basic example of creating a table:</p>
+      <code>CREATE TABLE employees (
             employee_id INTEGER PRIMARY KEY,
             first_name VARCHAR(50),
             last_name VARCHAR(50),
             hire_date DATE
             );</code>
-        <ul>
-          <li>CREATE TABLE: This statement creates a new table named "employees."</li>
-          <li>Inside the parentheses, you define the columns of the table along with their data types. In this example, we have columns for employee ID, first name, last name, and hire date.</li>
-          <li>The PRIMARY KEY constraint is used to ensure that the "employee_id" column contains unique values for each row. It serves as the table's primary key, which can be used to uniquely identify each employee.</li>
-        </ul>
-        <h4>2.4. Defining Relationships</h4>
-        <p>In a relational database, tables are often related to one another. You can establish these relationships using foreign keys. A foreign key is a column or set of columns in one table that refers to the primary key of another table. This enforces referential integrity and ensures data consistency.</p>
-        <p>Here's an example of creating a table with a foreign key relationship:</p>
-        <code>CREATE TABLE orders (
+      <ul>
+        <li>CREATE TABLE: This statement creates a new table named "employees."</li>
+        <li>Inside the parentheses, you define the columns of the table along with their data types. In this example, we
+          have columns for employee ID, first name, last name, and hire date.</li>
+        <li>The PRIMARY KEY constraint is used to ensure that the "employee_id" column contains unique values for each
+          row. It serves as the table's primary key, which can be used to uniquely identify each employee.</li>
+      </ul>
+      <h4>2.4. Defining Relationships</h4>
+      <p>In a relational database, tables are often related to one another. You can establish these relationships using
+        foreign keys. A foreign key is a column or set of columns in one table that refers to the primary key of another
+        table. This enforces referential integrity and ensures data consistency.</p>
+      <p>Here's an example of creating a table with a foreign key relationship:</p>
+      <code>CREATE TABLE orders (
             order_id INTEGER PRIMARY KEY,
             customer_id INTEGER,
             order_date DATE,
             FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
             ) </code>
-        <ul>
-          <li>In this example, the "orders" table has a "customer_id" column that references the "customer_id" column in the "customers" table. This relationship ensures that orders can only be associated with existing customers.</li>
-        </ul>
-      </section>
-      <section class="main-section" id="Querying_Data">
-        <header>
-          3. Querying Data
-        </header>
-        <h4>3.1. Retrieving Data</h4>
-        <p>
-          SQL's primary function is to retrieve data from databases. The foundation of data retrieval lies in the SELECT statement:
-        </p>
-        <code>
+      <ul>
+        <li>In this example, the "orders" table has a "customer_id" column that references the "customer_id" column in
+          the "customers" table. This relationship ensures that orders can only be associated with existing customers.
+        </li>
+      </ul>
+    </section>
+    <section class="main-section" id="Querying_Data">
+      <header>
+        3. Querying Data
+      </header>
+      <h4>3.1. Retrieving Data</h4>
+      <p>
+        SQL's primary function is to retrieve data from databases. The foundation of data retrieval lies in the SELECT
+        statement:
+      </p>
+      <code>
           SELECT column1, column2
           FROM table
           WHERE condition;
         </code>
-        <ul>
-          <li>SELECT: This keyword specifies the columns you want in the result set. You can use * to select all columns.</li>
-          <li>FROM: Specifies the table or tables from which you want to retrieve data.</li>
-          <li>WHERE: An optional clause for filtering data based on specified conditions. It includes only the rows that meet the criteria.</li>
-        </ul>
-        <h4>Filtering, Sorting and Aggregating:</h4>
-        <ul>
-          <li>Filtering: Use operators like =, <, >, etc., to filter data based on specific values or ranges.</li>
-        </ul>
-        <p>Example:</p>
-        <code>SELECT product_name, price FROM products WHERE price < 50;</code>
-        <ul>
-          <li>Sorting: Arrange the result set using the ORDER BY clause.</li>
-        </ul>
-        <p>Example:</p>
-        <code>SELECT employee_name, salary FROM employees ORDER BY salary DESC;</code>
-        <ul>
-          <li>Aggregating: SQL offers aggregate functions like COUNT, SUM, AVG, to perform calculations on grouped data.</li>
-        </ul>
-        <p>Example:</p>
-        <code>SELECT department, AVG(salary) FROM employees GROUP BY department;</code>
-        <h4>JOIN Clauses</h4>
-        <p>When data is distributed across multiple tables, SQL allows you to combine them using JOIN clauses. Here are some common types:</p>
-        <ul>
-          <li>INNER JOIN: Retrieves rows that have matching values in both tables.</li>
-        </ul>
-        <p>Example:</p>
-        <code>
+      <ul>
+        <li>SELECT: This keyword specifies the columns you want in the result set. You can use * to select all columns.
+        </li>
+        <li>FROM: Specifies the table or tables from which you want to retrieve data.</li>
+        <li>WHERE: An optional clause for filtering data based on specified conditions. It includes only the rows that
+          meet the criteria.</li>
+      </ul>
+      <h4>Filtering, Sorting and Aggregating:</h4>
+      <ul>
+        <li>Filtering: Use operators like =, <,>, etc., to filter data based on specific values or ranges.</li>
+      </ul>
+      <p>Example:</p>
+      <code>SELECT product_name, price FROM products WHERE price < 50;</code>
+      <ul>
+        <li>Sorting: Arrange the result set using the ORDER BY clause.</li>
+      </ul>
+      <p>Example:</p>
+      <code>SELECT employee_name, salary FROM employees ORDER BY salary DESC;</code>
+      <ul>
+        <li>Aggregating: SQL offers aggregate functions like COUNT, SUM, AVG, to perform calculations on grouped data.
+        </li>
+      </ul>
+      <p>Example:</p>
+      <code>SELECT department, AVG(salary) FROM employees GROUP BY department;</code>
+      <h4>JOIN Clauses</h4>
+      <p>When data is distributed across multiple tables, SQL allows you to combine them using JOIN clauses. Here are
+        some common types:</p>
+      <ul>
+        <li>INNER JOIN: Retrieves rows that have matching values in both tables.</li>
+      </ul>
+      <p>Example:</p>
+      <code>
           SELECT orders.order_id, customers.customer_name
           FROM orders
           INNER JOIN customers ON orders.customer_id = customers.customer_id;
         </code>
-        <ul>
-          <li>LEFT JOIN (or LEFT OUTER JOIN): Retrieves all rows from the left table and the matching rows from the right table. If there's no match, it still includes the left table's rows.</li>
-        </ul>
-        <p>Example:</p>
-        <code>
+      <ul>
+        <li>LEFT JOIN (or LEFT OUTER JOIN): Retrieves all rows from the left table and the matching rows from the right
+          table. If there's no match, it still includes the left table's rows.</li>
+      </ul>
+      <p>Example:</p>
+      <code>
           SELECT customers.customer_name, orders.order_date
           FROM customers
           LEFT JOIN orders ON customers.customer_id = orders.customer_id;
         </code>
-        <ul>
-          <li>RIGHT JOIN (or RIGHT OUTER JOIN): Similar to LEFT JOIN but includes all rows from the right table.</li>
-        </ul>
-        <p>Example:</p>
-        <code>
+      <ul>
+        <li>RIGHT JOIN (or RIGHT OUTER JOIN): Similar to LEFT JOIN but includes all rows from the right table.</li>
+      </ul>
+      <p>Example:</p>
+      <code>
           SELECT customers.customer_name, orders.order_date
           FROM customers
           RIGHT JOIN orders ON customers.customer_id = orders.customer_id;
         </code>
-        <ul>
-          <li>FULL JOIN (or FULL OUTER JOIN): Retrieves all rows when there is a match in either the left or the right table.</li>
-        </ul>
-        <p>Example:</p>
-        <code>
+      <ul>
+        <li>FULL JOIN (or FULL OUTER JOIN): Retrieves all rows when there is a match in either the left or the right
+          table.</li>
+      </ul>
+      <p>Example:</p>
+      <code>
           SELECT customers.customer_name, orders.order_date
           FROM customers
           FULL JOIN orders ON customers.customer_id = orders.customer_id;
         </code>
-      </section>
-      <section class="main-section" id="Data Modification">
-        <header>
-          Data Modification
-        </header>
-        <p>
+    </section>
+    <section class="main-section" id="Data Modification">
+      <header>
+        4. Data Modification
+      </header>
+      <h4>4.1. Inserting Data:</h4>
+      <p>SQL provides the INSERT INTO statement to add new records to a table. Here's how to use it:</p>
+      <code>
+          INSERT INTO table_name (column1, column2, ...)
+          VALUES (value1, value2, ...);
+        </code>
+      <ul>
+        <li>INSERT INTO: This SQL command specifies the target table where you want to insert data.</li>
+        <li>Within parentheses, list the columns into which you want to insert data.</li>
+        <li>In the VALUES clause, provide the corresponding values for each column.</li>
+      </ul>
+      <p>Example:</p>
+      <code>
+        INSERT INTO products (product_name, price)
+        VALUES ('Laptop', 999.99);
+      </code>
+      <h4>4.2. Updating Data</h4>
+      <p>To modify existing records in a table, use the UPDATE statement:</p>
+      <code>
+        UPDATE table_name
+        SET column1 = new_value1, column2 = new_value2, ...
+        WHERE condition;
+      </code>
+      <ul>
+        <li>UPDATE: This command identifies the table you want to update.</li>
+        <li>Use the SET clause to specify the columns to be modified along with their new values.</li>
+        <li>The optional WHERE clause filters the rows to be updated based on a condition.</li>
+      </ul>
+      <p>Example:</p>
+      <code>
+        UPDATE customers
+        SET email = 'newemail@example.com'
+        WHERE customer_id = 123;
+      </code>
+      <h4>Deleting Data:</h4>
+      <p>The DELETE FROM statement removes records from a table:</p>
+      <code>
+        DELETE FROM table_name
+        WHERE condition;
+      </code>
+      <ul>
+        <li>DELETE FROM: This SQL command specifies the table from which you want to delete records.</li>
+        <li>The optional WHERE clause determines which rows to delete based on a specified condition.</li>
+      </ul>
+      <p>Example:</p>
+      <code>
+        DELETE FROM orders
+        WHERE order_id = 456;
+      </code>
+      <p>It's crucial to exercise caution when using DELETE, as it permanently removes data from the database.</p>
+    </section>
+    <section class="main-section" id="Advanced_SQL">
+      <header>
+        Advanced SQL
+      </header>
+      <p>
 
-        </p>
-        <code>
+      </p>
+      <code>
 
         </code>
-      </section>
-      <section class="main-section" id="Advanced_SQL">
-        <header>
-          Advanced SQL
-        </header>
-        <p>
+    </section>
+  </main>
+</body>
 
-        </p>
-        <code>
-
-        </code>
-      </section>
-    </main>
-  </body>
 </html>
