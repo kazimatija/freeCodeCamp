@@ -18,8 +18,8 @@
     <a class="nav-link" href="#4._Data_Modification">4. Data Modification</a>
     <a class="nav-link" href="#5._Advanced_SQL">5. Advanced SQL</a>
     <a class="nav-link" href="#6._References">6. References</a>
-
   </nav>
+
   <main id="main-doc">
     <section class="main-section" id="0._Introduction">
       <header>
@@ -32,20 +32,23 @@
         data modification, advanced topics, security, performance optimization, error handling, and troubleshooting.
       </p>
     </section>
+
+
     <section class="main-section" id="1._SQL_Basics">
       <header>
         1. SQL Basics
       </header>
+
       <h4 id="1.1._Basic_SQL_Query">1.1. Basic SQL Query</h4>
       <p>
         At its core, SQL is all about querying data from databases. The most basic SQL statement is the SELECT
         statement, which retrieves data from one or more tables. Here's a breakdown of a basic SQL query:
       </p>
       <code>
-          SELECT column1, column2
-          FROM table
-          WHERE condition;
-        </code>
+        SELECT column1, column2
+        FROM table
+        WHERE condition;
+      </code>
       <ul>
         <li>SELECT: This keyword specifies the columns you want to retrieve in the result set. You can use * to select
           all columns.</li>
@@ -53,40 +56,47 @@
         <li>WHERE: Optional clause that allows you to filter the data based on a specified condition. The condition is
           used to include only the rows that meet specific criteria.</li>
       </ul>
+
       <h4 id="1.2._Common_SQL_Commands">1.2. Common SQL Commands</h4>
       <p>SQL provides a set of powerful commands for interacting with databases. Here are some of the most common SQL
         commands:</p>
       <ol>
-        <li>SELECT: Used to retrieve data from one or more tables. Example:
-          <code>SELECT first_name, last_name FROM employees;</code>
-        </li>
-        <li>INSERT: Adds new records to a table. Example:
-          <code>INSERT INTO products (product_name, price) VALUES ('Laptop', 999.99);</code>
-        </li>
-        <li>UPDATE: Modifies existing records in a table. Example:
-          <code>UPDATE customers SET email = 'newemail@example.com' WHERE customer_id = 123;</code>
-        </li>
-        <li>DELETE: Removes records from a table. Example: <code>DELETE FROM orders WHERE order_id = 456;</code></li>
+        <li>SELECT: Used to retrieve data from one or more tables.</li>
+        <p>Example:</p>
+        <code>SELECT first_name, last_name FROM employees;</code>
+        <li>INSERT: Adds new records to a table.</li>
+        <p>Example:</p>
+        <code>INSERT INTO products (product_name, price) VALUES ('Laptop', 999.99);</code>
+        <li>UPDATE: Modifies existing records in a table.</li>
+        <p>Example:</p>
+        <code>UPDATE customers SET email = 'newemail@example.com' WHERE customer_id = 123;</code>
+        <li>DELETE: Removes records from a table.</li>
+        <p>Example:</p>
+        <code>DELETE FROM orders WHERE order_id = 456;</code>
       </ol>
     </section>
+
+    
     <section class="main-section" id="2._Database_Management">
       <header>
         2. Database Management
       </header>
+
       <h4 id="2.1._Creating_Databases">2.1. Creating Databases</h4>
       <p>
         In SQL, a database is a structured collection of data organized into tables, views, and other objects. Before
         you can work with data, you need to create a database to store it. Here's how to create a database in SQL:
       </p>
       <code>
-          CREATE DATABASE database_name;
-        </code>
+        CREATE DATABASE database_name;
+      </code>
       <ul>
         <li>
           CREATE DATABASE: This SQL statement is used to create a new database. You specify the name of the database you
           want to create. The database_name should be unique within your database management system (DBMS).
         </li>
       </ul>
+
       <h4 id="2.2._Data_Types">2.2. Data Types</h4>
       <p>SQL supports various data types that define the kind of data a column can hold. Choosing the appropriate data
         type for each column is crucial for efficient data storage and retrieval. Here are some common data types in
@@ -100,15 +110,18 @@
       </ul>
       <p>When creating tables, you'll need to specify the data type for each column to ensure that the database
         correctly stores and interprets the data.</p>
+
       <h4 id="2.3._Creating_Tables">2.3. Creating Tables</h4>
       <p>Tables are the primary containers for storing data in a database. To create a table, you use the CREATE TABLE
         statement. Here's a basic example of creating a table:</p>
-      <code>CREATE TABLE employees (
-            employee_id INTEGER PRIMARY KEY,
-            first_name VARCHAR(50),
-            last_name VARCHAR(50),
-            hire_date DATE
-            );</code>
+      <code>
+        CREATE TABLE employees (
+        employee_id INTEGER PRIMARY KEY,
+        first_name VARCHAR(50),
+        last_name VARCHAR(50),
+        hire_date DATE
+        );
+      </code>
       <ul>
         <li>CREATE TABLE: This statement creates a new table named "employees."</li>
         <li>Inside the parentheses, you define the columns of the table along with their data types. In this example, we
@@ -116,44 +129,49 @@
         <li>The PRIMARY KEY constraint is used to ensure that the "employee_id" column contains unique values for each
           row. It serves as the table's primary key, which can be used to uniquely identify each employee.</li>
       </ul>
+      
       <h4 id="2.4._Defining_Relationships">2.4. Defining Relationships</h4>
       <p>In a relational database, tables are often related to one another. You can establish these relationships using
         foreign keys. A foreign key is a column or set of columns in one table that refers to the primary key of another
         table. This enforces referential integrity and ensures data consistency.</p>
       <p>Here's an example of creating a table with a foreign key relationship:</p>
-      <code>CREATE TABLE orders (
-            order_id INTEGER PRIMARY KEY,
-            customer_id INTEGER,
-            order_date DATE,
-            FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
-            ) </code>
+      <code>
+        CREATE TABLE orders (
+        order_id INTEGER PRIMARY KEY,
+        customer_id INTEGER,
+        order_date DATE,
+        FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
+        )
+      </code>
       <ul>
-        <li>In this example, the "orders" table has a "customer_id" column that references the "customer_id" column in
-          the "customers" table. This relationship ensures that orders can only be associated with existing customers.
+        <li>
+          In this example, the "orders" table has a "customer_id" column that references the "customer_id" column in the "customers" table. This relationship ensures that orders can only be associated with existing customers.
         </li>
       </ul>
     </section>
+
+
     <section class="main-section" id="3._Querying_Data">
       <header>
         3. Querying Data
       </header>
+
       <h4 id="3.1._Retrieving_Data">3.1. Retrieving Data</h4>
       <p>
-        SQL's primary function is to retrieve data from databases. The foundation of data retrieval lies in the SELECT
-        statement:
+        SQL's primary function is to retrieve data from databases. The foundation of data retrieval lies in the SELECT statement:
       </p>
       <code>
-          SELECT column1, column2
-          FROM table
-          WHERE condition;
-        </code>
+        SELECT column1, column2
+        FROM table
+        WHERE condition;
+      </code>
       <ul>
         <li>SELECT: This keyword specifies the columns you want in the result set. You can use * to select all columns.
         </li>
         <li>FROM: Specifies the table or tables from which you want to retrieve data.</li>
-        <li>WHERE: An optional clause for filtering data based on specified conditions. It includes only the rows that
-          meet the criteria.</li>
+        <li>WHERE: An optional clause for filtering data based on specified conditions. It includes only the rows that meet the criteria.</li>
       </ul>
+
       <h4 id="3.2._Filtering,_Sorting_and_Aggregating">3.2. Filtering, Sorting and Aggregating</h4>
       <ul>
         <li>Filtering: Use operators like =, <,>, etc., to filter data based on specific values or ranges.</li>
@@ -166,63 +184,63 @@
       <p>Example:</p>
       <code>SELECT employee_name, salary FROM employees ORDER BY salary DESC;</code>
       <ul>
-        <li>Aggregating: SQL offers aggregate functions like COUNT, SUM, AVG, to perform calculations on grouped data.
-        </li>
+        <li>Aggregating: SQL offers aggregate functions like COUNT, SUM, AVG, to perform calculations on grouped data.</li>
       </ul>
       <p>Example:</p>
       <code>SELECT department, AVG(salary) FROM employees GROUP BY department;</code>
+
       <h4 id="3.3._JOIN_Clauses">3.3. JOIN Clauses</h4>
-      <p>When data is distributed across multiple tables, SQL allows you to combine them using JOIN clauses. Here are
-        some common types:</p>
+      <p>When data is distributed across multiple tables, SQL allows you to combine them using JOIN clauses. Here are some common types:</p>
       <ul>
         <li>INNER JOIN: Retrieves rows that have matching values in both tables.</li>
       </ul>
       <p>Example:</p>
       <code>
-          SELECT orders.order_id, customers.customer_name
-          FROM orders
-          INNER JOIN customers ON orders.customer_id = customers.customer_id;
-        </code>
+        SELECT orders.order_id, customers.customer_name
+        FROM orders
+        INNER JOIN customers ON orders.customer_id = customers.customer_id;
+      </code>
       <ul>
-        <li>LEFT JOIN (or LEFT OUTER JOIN): Retrieves all rows from the left table and the matching rows from the right
-          table. If there's no match, it still includes the left table's rows.</li>
+        <li>LEFT JOIN (or LEFT OUTER JOIN): Retrieves all rows from the left table and the matching rows from the right table. If there's no match, it still includes the left table's rows.</li>
       </ul>
       <p>Example:</p>
       <code>
-          SELECT customers.customer_name, orders.order_date
-          FROM customers
-          LEFT JOIN orders ON customers.customer_id = orders.customer_id;
-        </code>
+        SELECT customers.customer_name, orders.order_date
+        FROM customers
+        LEFT JOIN orders ON customers.customer_id = orders.customer_id;
+      </code>
       <ul>
         <li>RIGHT JOIN (or RIGHT OUTER JOIN): Similar to LEFT JOIN but includes all rows from the right table.</li>
       </ul>
       <p>Example:</p>
       <code>
-          SELECT customers.customer_name, orders.order_date
-          FROM customers
-          RIGHT JOIN orders ON customers.customer_id = orders.customer_id;
-        </code>
+        SELECT customers.customer_name, orders.order_date
+        FROM customers
+        RIGHT JOIN orders ON customers.customer_id = orders.customer_id;
+      </code>
       <ul>
-        <li>FULL JOIN (or FULL OUTER JOIN): Retrieves all rows when there is a match in either the left or the right
-          table.</li>
+        <li>FULL JOIN (or FULL OUTER JOIN): Retrieves all rows when there is a match in either the left or the right table.</li>
       </ul>
       <p>Example:</p>
       <code>
-          SELECT customers.customer_name, orders.order_date
-          FROM customers
-          FULL JOIN orders ON customers.customer_id = orders.customer_id;
-        </code>
+        SELECT customers.customer_name, orders.order_date
+        FROM customers
+        FULL JOIN orders ON customers.customer_id = orders.customer_id;
+      </code>
     </section>
+
+
     <section class="main-section" id="4._Data_Modification">
       <header>
         4. Data Modification
       </header>
+
       <h4 id="4.1._Inserting_Data">4.1. Inserting Data</h4>
       <p>SQL provides the INSERT INTO statement to add new records to a table. Here's how to use it:</p>
       <code>
-          INSERT INTO table_name (column1, column2, ...)
-          VALUES (value1, value2, ...);
-        </code>
+        INSERT INTO table_name (column1, column2, ...)
+        VALUES (value1, value2, ...);
+      </code>
       <ul>
         <li>INSERT INTO: This SQL command specifies the target table where you want to insert data.</li>
         <li>Within parentheses, list the columns into which you want to insert data.</li>
@@ -233,6 +251,7 @@
         INSERT INTO products (product_name, price)
         VALUES ('Laptop', 999.99);
       </code>
+      
       <h4 id="4.2._Updating_Data">4.2. Updating Data</h4>
       <p>To modify existing records in a table, use the UPDATE statement:</p>
       <code>
@@ -251,6 +270,7 @@
         SET email = 'newemail@example.com'
         WHERE customer_id = 123;
       </code>
+      
       <h4 id="4.3._Deleting_Data">4.3. Deleting Data</h4>
       <p>The DELETE FROM statement removes records from a table:</p>
       <code>
@@ -268,10 +288,13 @@
       </code>
       <p>It's crucial to exercise caution when using DELETE, as it permanently removes data from the database.</p>
     </section>
+
+    
     <section class="main-section" id="5._Advanced_SQL">
       <header>
         5. Advanced SQL
       </header>
+
       <h4 id="5.1._Subqueries">5.1. Subqueries</h4>
       <p>
         Subqueries, also known as nested queries, are a powerful feature of SQL. They allow you to embed one query
@@ -283,19 +306,20 @@
         FROM products
         WHERE category_id IN (SELECT category_id FROM categories WHERE category_name = 'Electronics');
       </code>
-      <p>In this example, the subquery retrieves the category_id for the 'Electronics' category, and the main query
-        retrieves product names belonging to that category.
-      </p>
-      <h4 id="5.2._Views">>5.2. Views</h4>
-      <p>SQL views are virtual tables that store the results of a SELECT query. Views simplify complex queries and
-        provide a way to present specific subsets of data to users without exposing the underlying table structure.</p>
+      <p>In this example, the subquery retrieves the category_id for the 'Electronics' category, and the main query retrieves product names belonging to that category. </p>
+      
+      <h4 id="5.2._Views">5.2. Views</h4>
+      <p>SQL views are virtual tables that store the results of a SELECT query. Views simplify complex queries and provide a way to present specific subsets of data to users without exposing the underlying table structure.</p>
       <p>Example of creating a view:</p>
-      <code>CREATE VIEW customer_contacts AS
+      <code>
+        CREATE VIEW customer_contacts AS
         SELECT customer_id, first_name, last_name, email
-        FROM customers;</code>
-      <p>You can then query the "customer_contacts" view just like you would a table, even though it doesn't store data
-        itself.</p>
+        FROM customers;
+      </code>
+      <p>You can then query the "customer_contacts" view just like you would a table, even though it doesn't store data itself.</p>
     </section>
+
+
     <section class="main-section" id="6._References">
       <header>
         6. References
@@ -308,6 +332,7 @@
         <li>SQL Server Central: Community and articles on SQL topics</li>
       </ul>
     </section>
+
   </main>
 </body>
 
