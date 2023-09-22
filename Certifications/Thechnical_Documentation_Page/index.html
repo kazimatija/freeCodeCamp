@@ -11,6 +11,14 @@
 <body>
   <nav id="navbar">
     <header>SQL Documentation</header>
+    <a class="nav-link" href="#0._Introduction">0. Introduction</a>
+    <a class="nav-link" href="#1._SQL_Basics">1. SQL Basics</a>
+    <a class="nav-link" href="#2._Database_Management">2. Database Management</a>
+    <a class="nav-link" href="#3._Querying_Data">3. Querying Data</a>
+    <a class="nav-link" href="#4._Data_Modification">4. Data Modification</a>
+    <a class="nav-link" href="#5._Advanced_SQL">5. Advanced SQL</a>
+    <a class="nav-link" href="#6._References">6. References</a>
+
   </nav>
   <main id="main-doc">
     <section class="main-section" id="0._Introduction">
@@ -28,7 +36,7 @@
       <header>
         1. SQL Basics
       </header>
-      <h4>1.1. Basic SQL Query:</h4>
+      <h4 id="1.1._Basic_SQL_Query">1.1. Basic SQL Query</h4>
       <p>
         At its core, SQL is all about querying data from databases. The most basic SQL statement is the SELECT
         statement, which retrieves data from one or more tables. Here's a breakdown of a basic SQL query:
@@ -45,7 +53,7 @@
         <li>WHERE: Optional clause that allows you to filter the data based on a specified condition. The condition is
           used to include only the rows that meet specific criteria.</li>
       </ul>
-      <h4>1.2. Common SQL Commands:</h4>
+      <h4 id="1.2._Common_SQL_Commands">1.2. Common SQL Commands</h4>
       <p>SQL provides a set of powerful commands for interacting with databases. Here are some of the most common SQL
         commands:</p>
       <ol>
@@ -61,11 +69,11 @@
         <li>DELETE: Removes records from a table. Example: <code>DELETE FROM orders WHERE order_id = 456;</code></li>
       </ol>
     </section>
-    <section class="main-section" id="2._Database_Managment">
+    <section class="main-section" id="2._Database_Management">
       <header>
-        2. Database Managment
+        2. Database Management
       </header>
-      <h4>2.1. Creating Databases</h4>
+      <h4 id="2.1._Creating_Databases">2.1. Creating Databases</h4>
       <p>
         In SQL, a database is a structured collection of data organized into tables, views, and other objects. Before
         you can work with data, you need to create a database to store it. Here's how to create a database in SQL:
@@ -79,7 +87,7 @@
           want to create. The database_name should be unique within your database management system (DBMS).
         </li>
       </ul>
-      <h4>2.2. Data Types:</h4>
+      <h4 id="2.2._Data_Types">2.2. Data Types</h4>
       <p>SQL supports various data types that define the kind of data a column can hold. Choosing the appropriate data
         type for each column is crucial for efficient data storage and retrieval. Here are some common data types in
         SQL:</p>
@@ -92,7 +100,7 @@
       </ul>
       <p>When creating tables, you'll need to specify the data type for each column to ensure that the database
         correctly stores and interprets the data.</p>
-      <h4>2.3. Creating Tables:</h4>
+      <h4 id="2.3._Creating_Tables">2.3. Creating Tables</h4>
       <p>Tables are the primary containers for storing data in a database. To create a table, you use the CREATE TABLE
         statement. Here's a basic example of creating a table:</p>
       <code>CREATE TABLE employees (
@@ -108,7 +116,7 @@
         <li>The PRIMARY KEY constraint is used to ensure that the "employee_id" column contains unique values for each
           row. It serves as the table's primary key, which can be used to uniquely identify each employee.</li>
       </ul>
-      <h4>2.4. Defining Relationships</h4>
+      <h4 id="2.4._Defining_Relationships">2.4. Defining Relationships</h4>
       <p>In a relational database, tables are often related to one another. You can establish these relationships using
         foreign keys. A foreign key is a column or set of columns in one table that refers to the primary key of another
         table. This enforces referential integrity and ensures data consistency.</p>
@@ -129,7 +137,7 @@
       <header>
         3. Querying Data
       </header>
-      <h4>3.1. Retrieving Data</h4>
+      <h4 id="3.1._Retrieving_Data">3.1. Retrieving Data</h4>
       <p>
         SQL's primary function is to retrieve data from databases. The foundation of data retrieval lies in the SELECT
         statement:
@@ -146,7 +154,7 @@
         <li>WHERE: An optional clause for filtering data based on specified conditions. It includes only the rows that
           meet the criteria.</li>
       </ul>
-      <h4>3.2. Filtering, Sorting and Aggregating:</h4>
+      <h4 id="3.2._Filtering,_Sorting_and_Aggregating">3.2. Filtering, Sorting and Aggregating</h4>
       <ul>
         <li>Filtering: Use operators like =, <,>, etc., to filter data based on specific values or ranges.</li>
       </ul>
@@ -163,7 +171,7 @@
       </ul>
       <p>Example:</p>
       <code>SELECT department, AVG(salary) FROM employees GROUP BY department;</code>
-      <h4>3.3. JOIN Clauses</h4>
+      <h4 id="3.3._JOIN_Clauses">3.3. JOIN Clauses</h4>
       <p>When data is distributed across multiple tables, SQL allows you to combine them using JOIN clauses. Here are
         some common types:</p>
       <ul>
@@ -209,7 +217,7 @@
       <header>
         4. Data Modification
       </header>
-      <h4>4.1. Inserting Data:</h4>
+      <h4 id="4.1._Inserting_Data">4.1. Inserting Data</h4>
       <p>SQL provides the INSERT INTO statement to add new records to a table. Here's how to use it:</p>
       <code>
           INSERT INTO table_name (column1, column2, ...)
@@ -225,7 +233,7 @@
         INSERT INTO products (product_name, price)
         VALUES ('Laptop', 999.99);
       </code>
-      <h4>4.2. Updating Data</h4>
+      <h4 id="4.2._Updating_Data">4.2. Updating Data</h4>
       <p>To modify existing records in a table, use the UPDATE statement:</p>
       <code>
         UPDATE table_name
@@ -243,7 +251,7 @@
         SET email = 'newemail@example.com'
         WHERE customer_id = 123;
       </code>
-      <h4>4.3. Deleting Data:</h4>
+      <h4 id="4.3._Deleting_Data">4.3. Deleting Data</h4>
       <p>The DELETE FROM statement removes records from a table:</p>
       <code>
         DELETE FROM table_name
@@ -264,7 +272,7 @@
       <header>
         5. Advanced SQL
       </header>
-      <h4>5.1. Subqueries:</h4>
+      <h4 id="5.1._Subqueries">5.1. Subqueries</h4>
       <p>
         Subqueries, also known as nested queries, are a powerful feature of SQL. They allow you to embed one query
         within another. Subqueries are used for various purposes, such as data retrieval, filtering, and comparisons.
@@ -278,7 +286,7 @@
       <p>In this example, the subquery retrieves the category_id for the 'Electronics' category, and the main query
         retrieves product names belonging to that category.
       </p>
-      <h4>5.2. Views:</h4>
+      <h4 id="5.2._Views">>5.2. Views</h4>
       <p>SQL views are virtual tables that store the results of a SELECT query. Views simplify complex queries and
         provide a way to present specific subsets of data to users without exposing the underlying table structure.</p>
       <p>Example of creating a view:</p>
@@ -295,9 +303,9 @@
       <p>For further learning and reference, here are some recommended resources:</p>
       <ul>
         <li>SQLZoo: Interactive SQL tutorials.</li>
-        <li></li>SQL.org: Comprehensive SQL documentation</li>
-        <li></li>SQL Performance Explained: Book on SQL performance optimization</li>
-        <li></li>SQL Server Central: Community and articles on SQL topics</li>
+        <li>SQL.org: Comprehensive SQL documentation</li>
+        <li>SQL Performance Explained: Book on SQL performance optimization</li>
+        <li>SQL Server Central: Community and articles on SQL topics</li>
       </ul>
     </section>
   </main>
