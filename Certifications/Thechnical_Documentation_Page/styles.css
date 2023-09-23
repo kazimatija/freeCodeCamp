@@ -48,6 +48,13 @@ html, body {
     border-bottom: 1px solid;
 }
 
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
 header {
     color: black;
     text-align: left;
@@ -57,15 +64,7 @@ header {
 
 h4 {
     color: black;
-    font-weight: thin;
     padding-top: 10px;
-}
-
-#main-doc {
-    position: absolute;
-    margin-left: 310px;
-    padding: 20px;
-    margin-bottom: 110px;
 }
 
 section {
@@ -74,12 +73,17 @@ section {
 }
 
 section li {
-    margin: 15px 0px 0px 20px;
+    margin: 15px 0px 0px 10px;
+}
+
+p {
+    margin: 10px;
 }
 
 code {
     display: block;
     text-align: left;
+    font-size: 15px;
     white-space: pre-line;
     position: relative;
     word-break: normal;
@@ -90,6 +94,22 @@ code {
     margin: 10px;
     margin-bottom: 30px;
     border-radius: 5px;
+}
+
+span {
+    color: blue;
+}
+
+.aggregate {
+    color: orange;
+}
+
+.string {
+    color: green;
+}
+
+.number {
+    color: red;
 }
 
 @media only screen and (max-width: 815px) {
