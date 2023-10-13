@@ -11,18 +11,18 @@
 <body>
     <header id="header">
         <img id="header-img" src=".\DreamScape_Logo.png" alt="DreamScape VR Logo" height="150px">
-        <p>DreamScape</p>
+        <h1>DreamScape VR</h1>
         <nav id="nav-bar">
             <ul>
-                
+                <li><a class="nav-link" href="#features">Features</a></li>
             </ul>         
         </nav>
     </header>
     <main id="main">
-        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
-            <label>Email: <input type="email" placeholder="Enter Email" required id="email"></label>
-            <input type="submit" value="Submit" id="submit">
-        </form>
+        <div class="hero-section">
+            <img id="two-people" src=".\VR_Two_People.jpeg" alt="Two People with VR Headsets" width="50%"/>
+            <img id="one-person" src=".\VR_One_Person.jpeg" alt="One Person with VR Headset" width="50%"/>
+        </div>
         
         <div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
@@ -35,6 +35,11 @@
             <li>Android Devices</li>
             <li>iOS Devices</li>
         </ul>
+        <p>Enter your best email here to receive updates about DreamScape</p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+            <label>Email: <input type="email" placeholder="Enter Email" required id="email"></label>
+            <input type="submit" value="Submit" id="submit">
+        </form>
     </main>
     <footer></footer>
 </body>
