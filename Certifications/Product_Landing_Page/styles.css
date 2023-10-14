@@ -1,4 +1,8 @@
 header p {
     display: inline;
+    
+}
+
+header {
     background-color: blueviolet;
 }
