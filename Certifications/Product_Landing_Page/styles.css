@@ -6,3 +6,20 @@ header p {
 header {
     background-color:darkorchid;
 }
+
+.hero-section {
+    display: grid;
+    grid-template-areas: "image-left image-right" "features-left features-right";
+    gap: 20px;
+}
+
+/* Style for the images */
+.image-left, .image-right {
+    width: 100%; /* Adjust the image width as needed */
+}
+
+/* Style for the lists */
+.features-left, .features-right {
+    width: 100%; /* Adjust the list width as needed */
+    align-self: center;
+}
