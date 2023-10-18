@@ -26,6 +26,8 @@ header {
     display: grid;
     grid-template-areas: "image-left image-right" "features-left features-right";
     gap: 20px;
+    background: radial-gradient(#808080, #f5f5f5);
+    margin: 0;
 }
 
 .image-left, .image-right {
