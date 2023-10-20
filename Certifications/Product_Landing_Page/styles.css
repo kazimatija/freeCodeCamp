@@ -35,7 +35,16 @@ header {
     border: 2px solid #e5e5e5;
 }
 
+.image-left {
+    margin: 20px 0 0 20px;
+}
+
+.image-right {
+    margin-right: 200px;
+}
+
 .features-left, .features-right {
     width: 100%;
     align-self: center;
+    justify-self: center;
 }
