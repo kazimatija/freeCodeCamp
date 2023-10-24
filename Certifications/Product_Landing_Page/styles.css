@@ -10,11 +10,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    margin: -10px -10px 20px -10px;
+    margin: -10px -10px 50px -10px;
     background: linear-gradient(to bottom, #beafff,  #e2cbff);
     box-shadow: black 0 0 5px;
     max-height: fit-content;
-    min-width: 99%;
+    min-width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
