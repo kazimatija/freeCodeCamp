@@ -80,12 +80,24 @@ header p {
     left: -280px;
 }
 
+.video1 {
+    display: flex;
+    justify-content: center;
+    margin: 200px 0 0 0;
+    width: 100%;
+}
+
+.video2 {
+    border: rgb(67, 67, 67) solid 1px;
+    box-shadow: black 0 0 20px;
+}
+
 .compatibility {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 0 0 150px 0;
     font-size: 1.2em;
-    word-spacing: 15px;;
+    word-spacing: 10px;;
 }
 
 ::-webkit-scrollbar {
