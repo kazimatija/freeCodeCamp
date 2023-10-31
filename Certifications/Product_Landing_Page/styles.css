@@ -83,7 +83,7 @@ header p {
 .video1 {
     display: flex;
     justify-content: center;
-    margin: 200px 0 0 0;
+    margin: 230px 0 0 0;
     width: 100%;
 }
 
@@ -98,6 +98,44 @@ header p {
     margin: 0 0 150px 0;
     font-size: 1.2em;
     word-spacing: 10px;;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    gap: 400px;
+    margin: 170px 0 250px 0;
+}
+
+.white, .black-and-white {
+    box-shadow: black 0 0 10px;
+}
+
+.pricing h3 {
+    background: linear-gradient(to bottom, #beafff,  #e2cbff);
+    box-shadow: black 0 1px 0 0;
+    padding: 10px;
+    margin: 0;
+    white-space: pre-line;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.pricing li {
+    list-style: none;
+    font-size: 1.6em;
+    text-align: center;
+    margin-left: -50px;
+}
+
+.pricing button {
+    width: 300px;
+    height: 100px;
+    margin: 50px 0 50px 180px;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.6em;
+    background-color: #fbdcf9;
 }
 
 ::-webkit-scrollbar {
