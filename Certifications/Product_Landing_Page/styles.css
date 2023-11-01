@@ -100,6 +100,23 @@ header p {
     word-spacing: 10px;;
 }
 
+.social-proof {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 170px 0 250px 0;
+    font-size: 1.4em;
+}
+
+.john, .sarah, .mike, .emily, .alex {
+    box-shadow: black 0 0 10px;
+    padding: 10px;
+}
+
+.social-proof span {
+    font-weight: bold;
+}
+
 .pricing {
     display: flex;
     justify-content: center;
