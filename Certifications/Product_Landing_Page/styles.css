@@ -108,14 +108,16 @@ nav a {
 .social-proof {
     display: flex;
     justify-content: center;
-    gap: 100px;
-    margin: 170px 0 250px 0;
+    gap: 130px;
+    margin: 170px 40px 250px 40px;
     font-size: 1.4em;
 }
 
-.john, .sarah, .mike, .emily, .alex {
+.john, .sarah, .mike, .emily {
     box-shadow: black 0 0 10px;
     padding: 10px;
+    height: 800px;
+    width: 800px;
 }
 
 .social-proof span {
