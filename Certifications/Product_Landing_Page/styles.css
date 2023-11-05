@@ -149,13 +149,13 @@ nav a {
     list-style: none;
     font-size: 1.6em;
     text-align: center;
-    margin-left: -50px;
+    margin-left: -75px;
 }
 
 .pricing button {
     width: 300px;
     height: 100px;
-    margin: 50px auto;
+    margin: 50px 0 50px 180px;
     text-align: center;
     font-family: "Orbitron", sans-serif;
     font-size: 1.6em;
