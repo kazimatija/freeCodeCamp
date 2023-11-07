@@ -118,6 +118,7 @@ nav a {
     padding: 10px;
     height: 800px;
     width: 800px;
+    background: linear-gradient(to bottom, #cbb7ff, #fce1ff,  #cbb7ff);  
 }
 
 .social-proof span {
@@ -145,21 +146,26 @@ nav a {
     text-align: center;
 }
 
+.pricing #white {
+    color: white;
+}
+
 .pricing li {
     list-style: none;
     font-size: 1.6em;
     text-align: center;
     margin-left: -75px;
+    margin-top: 100px;
 }
 
 .pricing button {
     width: 300px;
     height: 100px;
-    margin: 50px 0 50px 180px;
+    margin: 50px 0 150px 180px;
     text-align: center;
     font-family: "Orbitron", sans-serif;
     font-size: 1.6em;
-    background-color: #fbdcf9;
+    background-color: #fce1ff;
 }
 
 .newsletter {
