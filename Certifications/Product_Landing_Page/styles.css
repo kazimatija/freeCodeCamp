@@ -241,3 +241,6 @@ footer a {
 ::-webkit-scrollbar-thumb:hover {
     background: #bdbdbd;
 }
+
+@media (max-width: 768px) {
+}
