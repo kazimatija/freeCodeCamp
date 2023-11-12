@@ -242,5 +242,11 @@ footer a {
     background: #bdbdbd;
 }
 
+@media (max-width: 1024px) {
+    .body {
+        font-size: 4vh;
+    }
+}
+
 @media (max-width: 768px) {
 }
