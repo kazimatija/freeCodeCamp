@@ -1,7 +1,6 @@
 body {
     background-color: #f5f5f5;
-    overflow-x: hidden;
-    font-size: 10px;
+    /*overflow-x: hidden; - add back if necessary*/
     font-family: "Orbitron", sans-serif;
 }
 
@@ -54,7 +53,7 @@ nav a {
     display: grid;
     grid-template-areas: "image-left image-right" "features-left features-right";
     gap: 3rem;
-    margin: 11rem 5rem 5rem 5rem;
+    margin: 10.5rem 5rem 5rem 5rem;
     font-size: 1.3rem;
     line-height: 2.5;
 }
@@ -79,7 +78,7 @@ nav a {
 }
 
 .features-right {
-    margin: 0.7rem 0 0 0;
+    margin: 1.8rem 0 0 0;
 }
 
 .features-left {
@@ -89,27 +88,33 @@ nav a {
 }
 
 .features-right img, .features-left img {
-    width: 50px;
+    width: 3rem;
 }
 
-.video1 {
+.features img {
+    margin-bottom: -0.5rem;
+}
+
+.video-container {
     display: flex;
     justify-content: center;
-    margin: 230px 0 0 0;
+    margin: 8rem 0 0 0;
     width: 100%;
 }
 
-.video2 {
-    border: rgb(67, 67, 67) solid 1px;
-    box-shadow: black 0 0 20px;
+video {
+    border: rgb(67, 67, 67) solid 0.05rem;
+    box-shadow: rgb(67, 67, 67) 0 0 1rem;
+    width: 60rem;
+    height: 33.75rem;
 }
 
 .compatibility {
     display: flex;
     justify-content: center;
     margin: 0 0 150px 0;
-    font-size: 1.2em;
-    word-spacing: 10px;;
+    font-size: 1.2rem;
+    word-spacing: 0.5rem;
 }
 
 .social-proof {
