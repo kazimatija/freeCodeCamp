@@ -1,6 +1,6 @@
 body {
     background-color: #f5f5f5;
-    /*overflow-x: hidden; - add back if necessary*/
+    overflow-x: hidden;
     font-family: "Orbitron", sans-serif;
 }
 
@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.8rem 1rem 0.5rem 1rem;
+    padding: 1.6rem 1rem 0.3rem 1rem;
     margin: -1.5rem -1.5rem 5rem -1.5rem;
     background: linear-gradient(to bottom, #beafff,  #e2cbff);
     box-shadow: black 0 0 0.5rem;
@@ -53,7 +53,7 @@ nav a {
     display: grid;
     grid-template-areas: "image-left image-right" "features-left features-right";
     gap: 3rem;
-    margin: 10.5rem 5rem 5rem 5rem;
+    margin: 9.5rem 5rem 5rem 4.1rem;
     font-size: 1.3rem;
     line-height: 2.5;
 }
@@ -84,7 +84,7 @@ nav a {
 .features-left {
     text-align: right;
     position: relative;
-    left: -8rem;
+    left: -8.7rem;
 }
 
 .features-right img, .features-left img {
@@ -98,21 +98,21 @@ nav a {
 .video-container {
     display: flex;
     justify-content: center;
-    margin: 8rem 0 0 0;
+    margin: 7rem 0 0 0;
     width: 100%;
 }
 
 video {
     border: rgb(67, 67, 67) solid 0.05rem;
     box-shadow: rgb(67, 67, 67) 0 0 1rem;
-    width: 60rem;
-    height: 33.75rem;
+    width: 53.98rem;
+    height: 30.375rem;
+    /*stavi u html video sa video hosting vebsajta, ne iz svojih fajlova.*/
 }
 
 .compatibility {
     display: flex;
     justify-content: center;
-    margin: 0 0 150px 0;
     font-size: 1.2rem;
     word-spacing: 0.5rem;
 }
@@ -120,16 +120,15 @@ video {
 .social-proof {
     display: flex;
     justify-content: center;
-    gap: 130px;
-    margin: 170px 40px 250px 40px;
-    font-size: 1.4em;
+    gap: 5rem;
+    margin: 5rem 3rem 5rem 3rem;
+    font-size: 1.2rem;
 }
 
 .john, .sarah, .mike, .emily {
-    box-shadow: black 0 0 10px;
-    padding: 10px;
-    height: 800px;
-    width: 800px;
+    box-shadow: black 0 0 0.5rem;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    width: 25rem;
     background: linear-gradient(to bottom, #cbb7ff, #fce1ff,  #cbb7ff);  
 }
 
@@ -140,19 +139,19 @@ video {
 .pricing {
     display: flex;
     justify-content: center;
-    gap: 400px;
-    margin: 170px 0 250px 0;
+    gap: 20rem;
+    margin: 7.5rem 0 15rem 0;
     text-align: center;
 }
 
 .white, .black-and-white {
-    box-shadow: black 0 0 10px;
+    box-shadow: black 0 0 0.5rem;
 }
 
 .pricing h3 {
     background: linear-gradient(to bottom, #beafff,  #e2cbff);
-    box-shadow: black 0 1px 0 0;
-    padding: 10px;
+    box-shadow: rgb(67, 67, 67) 0 0.035rem 0 0;
+    padding: 0.5rem;
     margin: 0;
     white-space: pre-line;
     line-height: 1.8;
@@ -251,6 +250,7 @@ footer a {
 @media (max-width: 1024px) {
     .body {
         font-size: 4vh;
+        overflow-x: visible;
     }
 }
 
