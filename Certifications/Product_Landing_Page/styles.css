@@ -165,15 +165,16 @@ video {
     list-style: none;
     font-size: 1.4rem;
     margin-left: -3.5rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .pricing button {
-    width: 300px;
-    height: 100px;
-    margin: 50px 0 150px 0px;
+    width: 9rem;
+    height: 4rem;
+    margin: 2rem 0 4rem 0;
     font-family: "Orbitron", sans-serif;
-    font-size: 1.6em;
+    font-size: 1.4rem;
+    text-transform: uppercase;
     background-color: #fce1ff;
     cursor: pointer;
 }
