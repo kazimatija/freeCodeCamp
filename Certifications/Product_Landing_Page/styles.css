@@ -100,7 +100,7 @@ nav a {
 .video-container {
     display: flex;
     justify-content: center;
-    margin: 7rem 0 0 0;
+    margin: 7rem 0 0 13rem;
     width: 100%;
 }
 
