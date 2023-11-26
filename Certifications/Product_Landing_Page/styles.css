@@ -103,14 +103,14 @@ nav a {
 .video-container {
     display: flex;
     justify-content: center;
-    /* margin: 7rem 0 0 13rem; */
+    margin: 6.2rem 0 0 0;
     width: 100%;
 }
 
 video {
     border: rgb(67, 67, 67) solid 0.05rem;
     box-shadow: rgb(67, 67, 67) 0 0 1rem;
-    width: 53.98rem;
+    width: 53.87rem;
     height: 30.375rem;
     /*stavi u html video sa video hosting vebsajta, ne iz svojih fajlova.*/
 }
@@ -120,14 +120,13 @@ video {
     justify-content: center;
     font-size: 1.2rem;
     word-spacing: 0.5rem;
-    /* margin: 0 0 0 25rem; */
 }
 
 .social-proof {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    /* margin: 4.5rem 3rem 5rem 28.5rem; */
+    margin: 4.5rem 0 5rem 0;
     font-size: 1.2rem;
 }
 
