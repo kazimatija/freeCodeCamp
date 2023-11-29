@@ -220,6 +220,7 @@ video {
 
 footer {
     background-color: #333333;
+    box-shadow: black 0 0 0.5rem;
     color: #ffffff;
     text-align: center;
     padding: 1.5rem 4.5rem;
