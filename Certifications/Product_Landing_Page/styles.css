@@ -258,9 +258,40 @@ footer a {
 }
 
 @media (max-width: 1024px) {
-    .body {
-        font-size: 4vh;
-        overflow-x: visible;
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .image-left, 
+    .image-right {
+        margin: 0 auto;
+        /* width: 50rem; */
+    }
+
+    .features-left,
+    .features-right {
+        margin: 1rem auto;
+        left: 0;
+    }
+
+    video {
+        width: 37rem;
+    }
+
+    .social-proof {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .john,
+    .sarah,
+    .mike,
+    .emily {
+        width: 30rem;
     }
 }
 
