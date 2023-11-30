@@ -282,6 +282,11 @@ footer a {
         width: 37rem;
     }
 
+    .compatibility {
+        max-width: 30rem;
+        margin: 0 auto;
+    }
+
     .social-proof {
         display: flex;
         flex-direction: column;
