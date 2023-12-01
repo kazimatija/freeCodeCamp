@@ -299,6 +299,10 @@ footer a {
     .emily {
         width: 30rem;
     }
+
+    .pricing {
+        gap: 5rem;
+    }
 }
 
 @media (max-width: 768px) {}
