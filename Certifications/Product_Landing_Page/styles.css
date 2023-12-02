@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    /* border: 1px solid black; */
 }
 
 body {
@@ -15,10 +14,6 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.2rem;
     background: linear-gradient(to bottom, #beafff, #e2cbff);
     box-shadow: black 0 0 0.5rem;
     min-width: 100%;
@@ -27,10 +22,17 @@ header {
     z-index: 1;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+    margin: 0 3rem 0 3rem;
+}
+
 #header-img {
     height: 3.5rem;
     margin-right: 0.5rem;
-    margin-left: 3.5rem;
 }
 
 header p {
@@ -39,7 +41,11 @@ header p {
 
 nav li {
     display: inline;
-    padding: 2rem;
+    padding: 0 2rem;
+}
+
+nav li:last-of-type {
+    padding-right: 0;
 }
 
 nav a {
@@ -51,10 +57,6 @@ nav a {
 .left-content {
     display: flex;
     align-items: center;
-}
-
-.right-content {
-    margin-right: 3rem;
 }
 
 .features {
@@ -108,7 +110,7 @@ nav a {
 }
 
 video {
-    border: rgb(67, 67, 67) solid 0.05rem;
+    border: rgb(108, 108, 108) solid 0.05rem;
     box-shadow: rgb(67, 67, 67) 0 0 0.5rem;
     background-color: black;
     max-width: 54rem;
@@ -221,15 +223,17 @@ video {
 footer {
     background-color: #333333;
     box-shadow: black 0 0 0.5rem;
-    color: #ffffff;
-    text-align: center;
-    padding: 1.5rem 4.5rem;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 3.2rem;
+    padding: 1.3rem 0rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #ffffff;
 }
 
 footer ul {
@@ -237,8 +241,13 @@ footer ul {
     padding: 0;
 }
 
-footer ul li {
+footer li {
     display: inline;
+    padding: 0 2rem;
+}
+
+footer li:last-of-type {
+    padding-right: 0;
 }
 
 footer a {
@@ -258,51 +267,110 @@ footer a {
     background: #bdbdbd;
 }
 
-@media (max-width: 1024px) {
-    .features {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-    }
-
-    .image-left, 
-    .image-right {
-        margin: 0 auto;
-        /* width: 50rem; */
-    }
-
-    .features-left,
-    .features-right {
-        margin: 1rem auto;
-        left: 0;
-    }
-
-    video {
-        width: 37rem;
-    }
-
-    .compatibility {
-        max-width: 30rem;
-        margin: 0 auto;
-    }
+@media (max-width: 1200px) {
 
     .social-proof {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 3rem;
+        margin: 2.5rem auto;
     }
 
     .john,
     .sarah,
     .mike,
     .emily {
-        width: 30rem;
-    }
-
-    .pricing {
-        gap: 5rem;
+        width: 75vw;
     }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 1100px) {
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 11.5rem;
+    }
+
+    .image-left,
+    .image-right {
+        margin: 0 auto;
+        width: 75vw;
+    }
+
+    .features-left,
+    .features-right {
+        margin: 1rem auto;
+        left: 0;
+        width: 75vw;
+    }
+
+    .video-container {
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    video {
+        width: 100%;
+        border: none;
+        box-shadow: black 0 0 0.4rem;
+    }
+
+    .compatibility {
+        width: 75vw;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .pricing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        margin: 4.5rem auto;
+    }
+
+    .white,
+    .black-and-white {
+        width: 50vw;
+    }
+
+    .newsletter {
+        margin: -2rem auto 4rem auto;
+        text-align: center;
+        width: 90vw;
+    }
+
+    #email {
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    .footer-content p {
+        max-width: 30vw;
+    }
+
+    footer li {
+        padding: 1rem;
+    }
+
+}
+
+@media (max-width: 880px) {
+    
+    nav li {
+        display: block;
+        padding: 0;
+    }
+
+    footer li {
+        display: block;
+        padding: 0;
+    }
+}
