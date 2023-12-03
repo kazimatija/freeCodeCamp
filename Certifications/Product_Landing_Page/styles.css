@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 body {
@@ -28,7 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.2rem;
-    margin: 0 3rem 0 3rem;
+    margin: 0 3rem;
 }
 
 #header-img {
@@ -290,12 +290,28 @@ footer a {
 @media (max-width: 1100px) {
 
     .features {
-        /* Ostalo ti je još ovo da središ. Hoću da ide jedna slika, pa tekst, pa druga slika pa tekst. */
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0;
         margin-top: 11.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .image-left {
+        order: 1;
+    }
+
+    .features-right {
+        order: 2;
+    }
+
+    .image-right {
+        order: 3;
+    }
+
+    .features-left {
+        order: 4;
     }
 
     .image-left,
@@ -307,8 +323,9 @@ footer a {
     .features-left,
     .features-right {
         margin: 1rem auto;
+        padding: 1rem;
         left: 0;
-        width: 75vw;
+        width: 80vw;
     }
 
     .video-container {
@@ -367,16 +384,14 @@ footer a {
 
 @media (max-width: 880px) {
 
-    /* .header-content, .footer-content {
-        padding: 0 1rem;
-    } */
-    
-    nav ul, footer ul {
+    nav ul,
+    footer ul {
         line-height: 1.7rem;
         text-align: right;
     }
 
-    nav li, footer li {
+    nav li,
+    footer li {
         display: block;
         padding: 0;
     }
