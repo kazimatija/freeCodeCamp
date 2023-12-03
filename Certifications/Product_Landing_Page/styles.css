@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    /* border: 1px solid black; */
 }
 
 body {
@@ -57,6 +58,7 @@ nav a {
 .left-content {
     display: flex;
     align-items: center;
+    margin-left: -0.8rem;
 }
 
 .features {
@@ -231,7 +233,7 @@ footer {
     align-items: center;
     margin: 0 3.2rem;
     padding: 1.3rem 0rem;
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
     color: #ffffff;
 }
@@ -288,6 +290,7 @@ footer a {
 @media (max-width: 1100px) {
 
     .features {
+        /* Ostalo ti je još ovo da središ. Hoću da ide jedna slika, pa tekst, pa druga slika pa tekst. */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -363,13 +366,17 @@ footer a {
 }
 
 @media (max-width: 880px) {
+
+    /* .header-content, .footer-content {
+        padding: 0 1rem;
+    } */
     
-    nav li {
-        display: block;
-        padding: 0;
+    nav ul, footer ul {
+        line-height: 1.7rem;
+        text-align: right;
     }
 
-    footer li {
+    nav li, footer li {
         display: block;
         padding: 0;
     }
