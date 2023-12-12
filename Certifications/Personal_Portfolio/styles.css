@@ -67,3 +67,29 @@ nav a {
     background-color: blue;
     color: white;
 }
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.dreamscape, .matbank, .sql {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description {
+    width: 40rem;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+img {
+    width: 30rem;
+    height: auto;
+}
