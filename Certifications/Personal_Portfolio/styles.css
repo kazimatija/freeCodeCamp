@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid black; */
 }
 
 body {
@@ -74,13 +75,28 @@ nav a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 2rem;
 }
 
 .dreamscape, .matbank, .sql {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 20rem;
+    color: white;
+}
+
+.dreamscape {
+    background-color: #5a537a;
+}
+
+.matbank {
+    background-color: #7a1032;
+}
+
+.sql {
+    background-color: #6f6f70;
 }
 
 .description {
@@ -90,7 +106,7 @@ nav a {
 }
 
 img {
-    width: 30rem;
+    width: 50rem;
     height: auto;
 }
 
