@@ -27,6 +27,11 @@ header {
     margin: 0 3rem;
 }
 
+header img {
+    width: 4rem;
+    height: auto;
+}
+
 nav li{
     display: inline;
     padding: 0 2rem;
