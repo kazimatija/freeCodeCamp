@@ -47,11 +47,20 @@ nav a {
     font-size: 1.2rem;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
 #welcome-section {
