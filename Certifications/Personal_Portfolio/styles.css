@@ -47,20 +47,11 @@ nav a {
     font-size: 1.2rem;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
 .main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
 }
 
 #welcome-section {
@@ -72,7 +63,7 @@ main {
     height: 100vh;
     background-color: #3e3e6c;
     color: white;
-    padding: 0 10rem;
+    padding: 0 15rem;
 }
 
 #about {
@@ -82,7 +73,7 @@ main {
     height: 90vh;
     background-color: white;
     font-size: 1.2rem;
-    padding: 5rem 10rem 0 10rem;
+    padding: 5rem 15rem 0 15rem;
 }
 
 #about li {
@@ -103,7 +94,7 @@ main {
 } 
 
 #projects .title {
-    padding: 0 10rem;
+    padding: 0 15rem;
 }
 
 .dreamscape, .matbank, .sql {
@@ -112,7 +103,7 @@ main {
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding: 0 10rem;
+    padding: 0 15rem;
     color: white;
 }
 
@@ -147,7 +138,7 @@ img {
     height: 100vh;
     background-color: white;
     gap: 1rem;
-    padding: 5rem 10rem 0 10rem;
+    padding: 5rem 15rem 0 15rem;
 }
 
 .name, .contact-info {
