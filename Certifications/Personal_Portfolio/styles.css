@@ -141,19 +141,35 @@ img {
     padding: 5rem 10rem 0 10rem;
 }
 
-#firstname, #lastname, #email, #phone {
-    width: 49.796%;
-    height: 7vh;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    font-size: 1.1rem;
+.name, .contact-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-#subject, #message {
+#firstname, #lastname, #email, #phone, #subject, #message {
     width: 100%;
-    height: 20vh;
-    padding: 0.5rem;
+    height: 7vh;
+    padding: 1rem;
     font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+#message {
+    height: 20vh;
+    font-size: 1.2rem;
+}
+
+button {
+    width: 10.5rem;
+    height: 3.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #2c2c2d;
+    border: none;
+    cursor: pointer;
 }
 
 footer {
