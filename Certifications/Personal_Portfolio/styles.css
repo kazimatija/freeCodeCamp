@@ -75,7 +75,7 @@ nav a {
     height: 90vh;
     background-color: white;
     font-size: 1.2rem;
-    padding: 0 17%;
+    padding: 0 17% 5rem 17%;
 }
 
 .about-content {
@@ -129,15 +129,14 @@ nav a {
 }
 
 .description {
-    width: 40rem;
+    width: 25rem;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
-img {
-    width: 40rem;
+#projects img {
+    width: 47rem;
     height: auto;
-    border: 6px solid white;
 }
 
 #contact {
