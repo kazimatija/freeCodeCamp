@@ -85,7 +85,10 @@ nav a {
 }
 
 #about ul {
+    display: flex;
+    flex-direction: column;
     list-style: square;
+    gap: 0.5rem;
 }
 
 #about li {
