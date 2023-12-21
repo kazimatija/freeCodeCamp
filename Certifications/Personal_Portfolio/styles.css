@@ -230,6 +230,13 @@ footer p {
     align-items: center;
 }
 
+footer svg {
+    width: 2.5rem;
+    height: auto;
+    margin-left: 0.5rem;
+    fill: white;
+}
+
 ::-webkit-scrollbar {
     background: #f5f5f5;
 }
