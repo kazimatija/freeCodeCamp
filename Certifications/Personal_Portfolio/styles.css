@@ -84,6 +84,10 @@ nav a {
     flex-direction: column;
 }
 
+#about ul {
+    list-style: square;
+}
+
 #about li {
     padding: 0.5rem 0;
 }
@@ -130,14 +134,25 @@ nav a {
 }
 
 .description {
+    display: flex;
+    flex-direction: column;
     width: 25rem;
     text-align: left;
     font-size: 1.5rem;
+    gap: 1rem;
+}
+
+.description ul {
+    display: flex;
+    flex-direction: column;
+    list-style: square inside;
+    gap: 0.5rem;
 }
 
 #projects img {
     width: 47rem;
     height: auto;
+    border: white 0.4rem solid;
 }
 
 #contact {
