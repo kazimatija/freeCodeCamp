@@ -159,11 +159,30 @@ nav a {
     font-size: 2rem;
 }
 
+.technologies-used {
+    padding: 0.5rem 0;
+}
+
 .description ul {
     display: flex;
     flex-direction: column;
     list-style: square inside;
     gap: 0.5rem;
+    padding: 1rem 0 0 1.5rem;
+}
+
+.project-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.5rem;
+    height: 3.5rem;
+    font-size: 1.15rem;
+    font-family: 'Exo 2', sans-serif;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
 }
 
 #projects img {
