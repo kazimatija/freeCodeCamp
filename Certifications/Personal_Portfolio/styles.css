@@ -293,3 +293,10 @@ footer svg {
 ::-webkit-scrollbar-thumb:hover {
     background: #bdbdbd;
 }
+
+@media (max-width: 1100px) {
+    nav li {
+        display: block;
+        padding: 0;
+    }
+}
