@@ -295,6 +295,15 @@ footer svg {
 }
 
 @media (max-width: 1100px) {
+
+    header {
+        position: initial;
+    }
+
+    nav ul {
+        padding: 0.5rem 0;
+    }
+
     nav li {
         display: block;
         padding: 0;
