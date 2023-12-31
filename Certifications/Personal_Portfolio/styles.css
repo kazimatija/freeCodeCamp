@@ -308,4 +308,13 @@ footer svg {
         display: block;
         padding: 0;
     }
+
+    .dreamscape,
+    .matbank,
+    .sql {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 150vh;
+    }
 }
