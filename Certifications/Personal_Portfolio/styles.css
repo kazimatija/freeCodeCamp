@@ -323,17 +323,12 @@ footer svg {
 
 @media (max-width: 750px) {
 
-    header {
-        position: initial;
-    }
-
     nav ul {
         padding: 0.5rem 0;
         text-align: right;
     }
 
     nav li {
-        display: block;
-        padding: 0;
+        padding: 0 1rem;
     }
 }
