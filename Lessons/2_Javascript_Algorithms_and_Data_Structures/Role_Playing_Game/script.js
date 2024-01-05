@@ -6,3 +6,4 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 let button1 = document.querrySelector("#button1");
+// Fix internet
