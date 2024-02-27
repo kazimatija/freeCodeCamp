@@ -3,7 +3,13 @@ const button = document.getElementById("check");
 const result = document.getElementById("result");
 
 const palindromeChecker = (input) => {
-    const phrase = input.value;
+
+    if(input.value === "") {
+        result.innerHTML = "Please enter a phrase";
+        return;
+    }
+
+    const phrase = input.value.toLowerCase().replace(/\s/g, "");
     const reversedPhrase = phrase
         .split("")
         .reverse()
@@ -14,4 +20,20 @@ const palindromeChecker = (input) => {
     } else {
         result.innerHTML = "The phrase is not a palindrome";
     }
+
+    result.classList.remove('hidden');
 };
+
+input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      palindromeChecker(input);
+      input.value = '';
+    }
+});
+
+button.addEventListener('click', (event) => {
+    event.preventDefault();
+    palindromeChecker(input);
+    input.value = '';
+});
