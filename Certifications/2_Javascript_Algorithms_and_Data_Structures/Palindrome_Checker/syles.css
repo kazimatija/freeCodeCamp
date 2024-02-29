@@ -2,10 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kode Mono', sans-serif;
 }
 
 main {
@@ -14,26 +15,58 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f8f9fa;
+    background-color: #041525;
+}
 
+#checker {
+    text-align: center;
+    width: 35%;
+    background-color: #06305a;
+    margin-bottom: 3rem;
+    padding: 1.5rem 1rem;
+    border-radius: 5rem 1rem;
+    box-shadow: 0.5rem 0.5rem #020c18;
+}
+
+input {
+    width: 50%;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: large;
+    color: black;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin: 0 0 2.5rem 0;
 }
 
-p {
-    font-size: 1.2rem;
+p,
+label {
+    font-size: 1.4rem;
     margin-bottom: 1rem;
+    text-align: center;
+}
+
+#result {
+    margin: 0;
 }
 
 button {
-    background-color: #007bff;
+    background-color: black;
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.25rem;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+#definition {
+    width: 35%;
+    background-color: #922727;
+    color: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem 5rem 1rem;
+    box-shadow: 0.5rem 0.5rem #1f0808;
 }
