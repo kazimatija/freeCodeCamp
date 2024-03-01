@@ -16,9 +16,9 @@ const palindromeChecker = (input) => {
         .join("");
 
     if (reversedPhrase === phrase) {
-        result.innerHTML = "The phrase is a palindrome";
+        result.innerHTML = `The phrase "<strong>${input.value}</strong>" is a palindrome`;
     } else {
-        result.innerHTML = "The phrase is not a palindrome";
+        result.innerHTML = `The phrase "<strong>${input.value}</strong>" is not a palindrome`;
     }
 
     result.classList.remove('hidden');
