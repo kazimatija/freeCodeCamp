@@ -20,7 +20,7 @@ main {
 
 #checker {
     text-align: center;
-    width: 35%;
+    width: 45%;
     background-color: #06305a;
     margin-bottom: 3rem;
     padding: 1.5rem 1rem;
@@ -63,7 +63,7 @@ button {
 }
 
 #definition {
-    width: 35%;
+    width: 45%;
     background-color: #922727;
     color: #fff;
     padding: 1.5rem 1rem;
