@@ -1,24 +1,24 @@
-const input = document.getElementById("phrase");
-const button = document.getElementById("check");
-const result = document.getElementById("result");
+const input = document.getElementById("text-input");
+const button = document.getElementById("check-btn");
+const result = document.getElementById("result-output");
 
 const palindromeChecker = (input) => {
 
     if(input.value === "") {
-        result.innerHTML = "Please enter a phrase";
+        alert("Please input a value");
         return;
     }
 
-    const phrase = input.value.toLowerCase().replace(/\s/g, "");
+    const phrase = input.value.toLowerCase().replace(/[^A-Za-z0-9]/gi, "");
     const reversedPhrase = phrase
         .split("")
         .reverse()
         .join("");
 
     if (reversedPhrase === phrase) {
-        result.innerHTML = `The phrase "<strong>${input.value}</strong>" is a palindrome`;
+        result.innerHTML = `<strong>${input.value}</strong> is a palindrome`;
     } else {
-        result.innerHTML = `The phrase "<strong>${input.value}</strong>" is not a palindrome`;
+        result.innerHTML = `<strong>${input.value}</strong> is not a palindrome`;
     }
 
     result.classList.remove('hidden');
