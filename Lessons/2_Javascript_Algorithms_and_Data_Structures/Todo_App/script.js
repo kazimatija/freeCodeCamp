@@ -44,6 +44,10 @@ taskForm.addEventListener("submit", (e) => {
         taskData.unshift(taskObj);
     }
 
-    taskData.forEach(({ id, title, date, description }));
-
+    taskData.forEach(({ id, title, date, description }) => {
+        (tasksContainer.innerHTML += `
+          
+      `)
+    }
+    );
 });
