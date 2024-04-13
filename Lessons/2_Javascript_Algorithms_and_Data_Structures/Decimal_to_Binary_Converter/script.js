@@ -7,6 +7,8 @@ const decimalToBinary = (input) => {
   const quotients = [];
   const remainders = [];
 
+  input = 0;
+
 
 };
 
