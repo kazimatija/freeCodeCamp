@@ -9,7 +9,9 @@ const decimalToBinary = (input) => {
 
   input = 0;
 
+  while (input > 0) {
 
+  }
 };
 
 const checkUserInput = () => {
