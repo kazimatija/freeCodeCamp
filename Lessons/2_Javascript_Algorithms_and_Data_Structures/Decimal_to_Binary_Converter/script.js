@@ -8,7 +8,7 @@ const decimalToBinary = (input) => {
   const remainders = [];
 
   while (input > 0) {
-
+    const quotient = input / 2;
 
     input = 0;
   }
@@ -30,4 +30,4 @@ numberInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     checkUserInput();
   }
-});
+});F
