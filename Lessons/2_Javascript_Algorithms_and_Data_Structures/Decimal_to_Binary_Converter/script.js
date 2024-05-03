@@ -1,4 +1,6 @@
+const callStack = [
 
+];
 
 const a = () => {
   return "freeCodeCamp " + b();
