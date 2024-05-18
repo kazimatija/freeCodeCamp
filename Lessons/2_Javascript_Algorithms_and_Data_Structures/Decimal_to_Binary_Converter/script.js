@@ -33,7 +33,7 @@ const showAnimation = () => {
 
   animationData.forEach((obj) => {
     setTimeout(() => {
-
+      animationContainer.innerHTML += ``;
     }, obj.addElDelay);
   });
 };
