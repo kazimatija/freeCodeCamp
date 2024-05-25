@@ -50,7 +50,7 @@ const showAnimation = () => {
     }, obj.addElDelay);
 
     setTimeout(() => {
-
+      document.getElementById(obj.inputVal);
     }, obj.showMsgDelay);
   });
 };
