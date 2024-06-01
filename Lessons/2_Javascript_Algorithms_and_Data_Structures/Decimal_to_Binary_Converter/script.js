@@ -58,7 +58,9 @@ const showAnimation = () => {
     }, obj.removeElDelay);
   });
 
+  setTimeout(() => {
 
+  }, 20000);
 };
 
 const checkUserInput = () => {
