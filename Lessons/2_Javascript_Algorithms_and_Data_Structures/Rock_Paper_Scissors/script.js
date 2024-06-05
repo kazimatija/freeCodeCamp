@@ -1,5 +1,12 @@
 function getRandomComputerResult() {
     const options = ["Rock", "Paper", "Scissors"];
-  
-  }
-  console.log(getRandomComputerResult());
+    const randomIndex = Math.floor(Math.random() * options.length);
+    return options[randomIndex];
+}
+
+function hasPlayerWonTheRound(player, computer) {
+
+}
+
+console.log(hasPlayerWonTheRound("Rock", "Scissors"));
+console.log(hasPlayerWonTheRound("Scissors", "Rock")); 
