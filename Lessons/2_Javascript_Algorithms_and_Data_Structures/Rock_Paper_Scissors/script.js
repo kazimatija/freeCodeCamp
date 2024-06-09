@@ -34,7 +34,10 @@ const computerScoreSpanElement = document.getElementById("computer-score");
 const roundResultsMsg = document.getElementById("results-msg");
 
 function showResults(userOption) {
-
+  roundResultsMsg = getRoundResult(userOption);
+  playerScoreSpanElement.innerText = playerScore;
+  computerScoreSpanElement.innerText = computerScore;
+  
 };
 
 showResults("Rock");
