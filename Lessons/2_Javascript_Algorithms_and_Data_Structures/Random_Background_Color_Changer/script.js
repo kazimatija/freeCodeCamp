@@ -20,7 +20,7 @@ const darkColorsArr = [
   const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
   
   function changeBackgroundColor() {
-    const color = darkColorsArr[getRandomIndex];
+    const color = darkColorsArr[getRandomIndex()];
   
     bgHexCodeSpanElement.innerText = color;
     body.style.backgroundColor = color;
