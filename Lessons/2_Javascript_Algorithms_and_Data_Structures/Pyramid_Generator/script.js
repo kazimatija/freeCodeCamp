@@ -5,7 +5,8 @@ const rows = [];
 function padRow() {
 
 }
-padRow();
+const call = padRow();
+
 
 
 for (let i = 0; i < count; i = i + 1) {
