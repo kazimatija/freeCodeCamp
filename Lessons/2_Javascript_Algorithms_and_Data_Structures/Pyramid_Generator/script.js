@@ -5,12 +5,6 @@ const rows = [];
 function padRow(name) {
   return name;
 }
-function addTwoNumbers(firstNumber, secondNumber) {
-  return firstNumber + secondNumber;
-}
-let sum = addTwoNumbers(5, 10)
-console.log(sum);
-
 const call = padRow("CamperChan");
 console.log(call);
 
