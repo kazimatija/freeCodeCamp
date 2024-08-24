@@ -1,19 +1,19 @@
-const character = "#";
-const count = 8;
-const rows = [];
+// const character = "#";
+// const count = 8;
+// const rows = [];
 
-function padRow() {
+// function padRow() {
 
-}
+// }
 
-for (let i = 0; i < count; i = i + 1) {
-  rows.push(character.repeat(i + 1))
-}
+// for (let i = 0; i < count; i = i + 1) {
+//   rows.push(character.repeat(i + 1))
+// }
 
-let result = ""
+// let result = ""
 
-for (const row of rows) {
-  result = result + "\n" + row;
-}
+// for (const row of rows) {
+//   result = result + "\n" + row;
+// }
 
-console.log(result);
+// console.log(result);
