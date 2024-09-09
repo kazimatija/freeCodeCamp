@@ -11,12 +11,11 @@ function padRow(rowNumber, rowCount) {
   rows.push(padRow(i, count));
 }*/
 
-if ("") {
-  console.log("Condition is true");
-} else if (5 < 10) {
-  console.log("5 is less than 10");
-} else {
-  console.log("This is the else block");
+let done = 0;
+
+while (done <= count) {
+  done++;
+  rows.push(padRow(done, count));
 }
 
 let result = ""
