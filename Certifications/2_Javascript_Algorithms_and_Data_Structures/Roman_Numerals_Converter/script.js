@@ -1,41 +1,49 @@
-document.getElementById('convert-btn').addEventListener('click', function() {
-    const num = parseInt(document.getElementById('number').value);
-    const output = document.getElementById('output');
-
-    if (isNaN(num)) {
-        output.textContent = "Please enter a valid number";
-    } else if (num < 1) {
-        output.textContent = "Please enter a number greater than or equal to 1";
-    } else if (num >= 4000) {
-        output.textContent = "Please enter a number less than or equal to 3999";
-    } else {
-        output.textContent = convertToRoman(num);
+document.getElementById('convert-btn').addEventListener('click', convertToRoman);
+document.getElementById('number').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        convertToRoman();
     }
 });
 
-function convertToRoman(num) {
-    const romanNumerals = [
-        { value: 1000, symbol: 'M' },
-        { value: 900, symbol: 'CM' },
-        { value: 500, symbol: 'D' },
-        { value: 400, symbol: 'CD' },
-        { value: 100, symbol: 'C' },
-        { value: 90, symbol: 'XC' },
-        { value: 50, symbol: 'L' },
-        { value: 40, symbol: 'XL' },
-        { value: 10, symbol: 'X' },
-        { value: 9, symbol: 'IX' },
-        { value: 5, symbol: 'V' },
-        { value: 4, symbol: 'IV' },
-        { value: 1, symbol: 'I' }
-    ];
+function convertToRoman() {
+    const numberInput = document.getElementById('number').value;
+    const output = document.getElementById('output');
+    
+    output.classList.remove('error', 'success');
+    
+    if (numberInput === '') {
+        output.textContent = 'Please enter a valid number';
+        output.classList.add('error');
+        return;
+    }
 
+    const number = parseInt(numberInput);
+    if (number === -1) {
+        output.textContent = 'Please enter a number greater than or equal to 1';
+        output.classList.add('error');
+        return;
+    } else if (number >= 4000) {
+        output.textContent = 'Please enter a number less than or equal to 3999';
+        output.classList.add('error');
+        return;
+    }
+    
+    const romanNumerals = [
+        ['M', 1000], ['CM', 900], ['D', 500], ['CD', 400],
+        ['C', 100], ['XC', 90], ['L', 50], ['XL', 40],
+        ['X', 10], ['IX', 9], ['V', 5], ['IV', 4], ['I', 1]
+    ];
+    
     let roman = '';
-    for (const { value, symbol } of romanNumerals) {
+    let num = number;
+    
+    for (let [letter, value] of romanNumerals) {
         while (num >= value) {
-            roman += symbol;
+            roman += letter;
             num -= value;
         }
     }
-    return roman;
+    
+    output.textContent = roman;
+    output.classList.add('success');
 }
