@@ -1,36 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0e7ff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f9;
 }
 
 .container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    max-width: 500px;
+    min-height: 50vh;
+    border: 3px solid #6C63FF;
 }
 
-input, button {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+input {
+    width: 85%;
+    padding: 15px;
+    font-size: 1.3em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #6C63FF;
+    outline: none;
 }
 
 button {
+    width: 85%;
+    padding: 12px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #6C63FF;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #5753c9;
+    transform: scale(1.05);
 }
 
 #output {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #333;
-    margin-top: 20px;
+    margin: 20px auto;
+    width: 85%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+
+#output.error {
+    background-color: #ffe5e5;
+    border-color: #ff6b6b;
+    color: #c0392b;
+}
+
+#output.success {
+    background-color: #e0f7ff;
+    border-color: #6C63FF;
+    color: #333;
 }
