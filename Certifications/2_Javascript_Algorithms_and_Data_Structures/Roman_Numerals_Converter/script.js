@@ -18,7 +18,7 @@ function convertToRoman() {
     }
 
     const number = parseInt(numberInput);
-    if (number === -1) {
+    if (number <= 0) {
         output.textContent = 'Please enter a number greater than or equal to 1';
         output.classList.add('error');
         return;
