@@ -9,7 +9,9 @@ const sortInputArray = (event) => {
 }
 
 const updateUI = (array = []) => {
+  array.forEach((num, i) => {
 
+  })
 }
 
 sortButton.addEventListener("click", sortInputArray);
