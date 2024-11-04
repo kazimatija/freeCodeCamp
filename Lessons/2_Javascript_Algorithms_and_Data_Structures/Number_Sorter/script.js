@@ -15,4 +15,3 @@ const updateUI = (array = []) => {
 }
 
 sortButton.addEventListener("click", sortInputArray);
-agsagsga
