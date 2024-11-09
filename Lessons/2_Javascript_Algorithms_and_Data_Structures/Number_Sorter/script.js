@@ -6,6 +6,8 @@ const sortInputArray = (event) => {
   const inputValues = [
     ...document.getElementsByClassName("values-dropdown")
   ].map((dropdown) => Number(dropdown.value));
+
+updateUI(inputValues);
 }
 
 const updateUI = (array = []) => {
