@@ -30,13 +30,16 @@ const getRange = (array) => {
   return Math.max(...array) - Math.min(...array);
 }
 
+const getVariance = (array) => {
+  const mean = getMean(array);
 
+}
 
 const calculate = () => {
   const value = document.querySelector("#numbers").value;
   const array = value.split(/,\s*/g);
   const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
-  
+
   const mean = getMean(numbers);
   const median = getMedian(numbers);
   const mode = getMode(numbers);
