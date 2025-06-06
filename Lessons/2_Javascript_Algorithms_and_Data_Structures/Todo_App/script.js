@@ -13,14 +13,21 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 
+const removeSpecialChars = (val) => {
+    return val.trim().replace(/[^A-Za-z0-9\-\s]/g, '')
+}
+
 const addOrUpdateTask = () => {
-    addOrUpdateTaskBtn.innerText = "Add Task";
+    if (!titleInput.value.trim()) {
+        alert("Please provide a title");
+        return;
+    }
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
     const taskObj = {
-        id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
-        title: titleInput.value,
+        id: `${removeSpecialChars(titleInput.value).toLowerCase().split(" ").join("-")}-${Date.now()}`,
+        title: removeSpecialChars(titleInput.value),
         date: dateInput.value,
-        description: descriptionInput.value,
+        description: removeSpecialChars(descriptionInput.value),
     };
 
     if (dataArrIndex === -1) {
@@ -80,6 +87,7 @@ const editTask = (buttonEl) => {
 }
 
 const reset = () => {
+    addOrUpdateTaskBtn.innerText = "Add Task";
     titleInput.value = "";
     dateInput.value = "";
     descriptionInput.value = "";
@@ -90,7 +98,6 @@ const reset = () => {
 if (taskData.length) {
     updateTaskContainer();
 }
-
 
 openTaskFormBtn.addEventListener("click", () =>
     taskForm.classList.toggle("hidden")
