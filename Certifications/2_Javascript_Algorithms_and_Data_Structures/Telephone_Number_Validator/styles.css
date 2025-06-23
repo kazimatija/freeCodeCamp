@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(102, 40, 184);
+  background-color: rgb(65, 80, 211);
   color: white;
 }
 
@@ -32,8 +32,8 @@ header {
   flex-direction: column;
   background-color: rgb(246, 247, 253);
   border-style: solid;
-  border-color: rgb(16, 0, 54);
-  border-width: 30px 15px 30px 15px;
+  border-color: rgb(8, 1, 26);
+  border-width: 25px 10px 25px 10px;
   border-radius: 10px;
   box-shadow: 0 0 0 2px #000;
   height: 512px;
@@ -46,7 +46,7 @@ header {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 label {
@@ -55,7 +55,7 @@ label {
 
 input {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   height: 30px;
   font-size: 16px;
 }
@@ -83,6 +83,22 @@ p {
 }
 
 button {
-  font-size: 20px;
+  font-size: 16px;
   width: 100%;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004080;
 }
