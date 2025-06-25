@@ -1,8 +1,114 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(145, 145, 255);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#change {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#entry {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+button,
+input {
+  width: 100%;
+}
+
+#register {
+  width: 400px;
+}
+
+#upper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(96, 95, 109);
+  border: 20px solid rgb(96, 95, 109);
+  box-shadow: 0 0 0 2px #000;
+  border-radius: 10% 10% 0 0;
+}
+
+#total {
+  background-color: white;
+  border: 2px solid black;
+  width: 50%;
+}
+
+#cash-in-drawer {
+  background-color: white;
+  border: 2px solid black;
+  width: 100%;
+}
+
+h3 {
+  margin: 0 auto;
+}
+
+#lower {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(46, 45, 54),
+    rgb(96, 95, 109)
+  );
+  box-shadow: 0 0 0 2px #000;
+}
+
+#keyhole {
+  width: 10px;
+  height: 30px;
+  background: #222;
+  border-radius: 50% 50% 40% 40%;
+  position: relative;
+  margin: 40px auto;
+}
+
+#keyhole {
+  box-shadow: inset 0 0 5px #000, 0 0 2px #666;
+}
+
+#keyhole {
+  background: radial-gradient(#444, #111);
+}
