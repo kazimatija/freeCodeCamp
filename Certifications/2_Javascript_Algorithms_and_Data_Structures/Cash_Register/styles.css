@@ -30,7 +30,7 @@ main {
   padding: 10px;
 }
 
-#change {
+#change-due {
   display: flex;
   gap: 8px;
   flex-direction: column;
