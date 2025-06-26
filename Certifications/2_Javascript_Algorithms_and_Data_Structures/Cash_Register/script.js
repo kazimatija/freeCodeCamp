@@ -137,4 +137,5 @@ window.onload = loadValues();
 purchaseButton.addEventListener('click', () => {
   makeTransaction();
   loadValues();
+  cashInput.value = "";
 })
