@@ -1,8 +1,80 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black */
 }
 
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: rgb(41, 41, 84);
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+main,
+#search-form,
+#description {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+main {
+  margin: 1rem;
+  padding: 1rem;
+  height: 30rem;
+  width: 35rem;
+  background-color: antiquewhite;
+  border: 4px #ccc solid;
+  font-size: 1.5rem;
+}
+
+label {
+    margin: 0 auto;
+}
+
+input,
+button {
+  height: 2.5rem;
+  font-size: 1.4rem;
+  outline: none;
+  border: 2px solid #ccc;
+  transition: box-shadow 0.3s ease;
+}
+
+button:focus,
+input:focus {
+  box-shadow: 0 0 5px 2px #ccc;
+}
+
+#stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.stats-label {
+  color: white;
+  background-color: rgb(22, 22, 69);
+  border: 2px solid #000000;
+  border-radius: 5%;
+}
