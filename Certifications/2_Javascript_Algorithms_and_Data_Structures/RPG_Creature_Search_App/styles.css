@@ -40,15 +40,16 @@ main,
 main {
   margin: 1rem;
   padding: 1rem;
-  height: 30rem;
+  height: 40rem;
   width: 35rem;
   background-color: antiquewhite;
-  border: 4px #ccc solid;
+  border: 0.4rem rgb(11, 11, 37) solid;
+  border-radius: 6%;
   font-size: 1.5rem;
 }
 
 label {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 input,
@@ -56,7 +57,7 @@ button {
   height: 2.5rem;
   font-size: 1.4rem;
   outline: none;
-  border: 2px solid #ccc;
+  border: 2px rgb(41, 41, 146) solid;
   transition: box-shadow 0.3s ease;
 }
 
@@ -70,11 +71,26 @@ input:focus {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+#left-column,
+#right-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
 }
 
 .stats-label {
   color: white;
   background-color: rgb(22, 22, 69);
-  border: 2px solid #000000;
+  border: 0.2rem solid #000;
   border-radius: 5%;
+  height: 2.5rem;
+  width: 15rem;
+  line-height: 2.2rem;
 }
