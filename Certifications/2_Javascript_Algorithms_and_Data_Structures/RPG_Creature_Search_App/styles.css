@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 1px solid black */
 }
 
 html {
@@ -29,7 +28,8 @@ h1 {
 
 main,
 #search-form,
-#description {
+#description,
+#ability-container {
   display: flex;
   align-items: left;
   justify-content: center;
@@ -40,12 +40,13 @@ main,
 main {
   margin: 1rem;
   padding: 1rem;
-  height: 40rem;
+  height: 50rem;
   width: 35rem;
   background-color: antiquewhite;
   border: 0.4rem rgb(11, 11, 37) solid;
   border-radius: 6%;
   font-size: 1.5rem;
+  gap: 3rem;
 }
 
 label {
@@ -55,6 +56,8 @@ label {
 input,
 button {
   height: 2.5rem;
+  width: 31rem;
+  margin: 0 auto;
   font-size: 1.4rem;
   outline: none;
   border: 2px rgb(41, 41, 146) solid;
@@ -66,13 +69,112 @@ input:focus {
   box-shadow: 0 0 5px 2px #ccc;
 }
 
+#description {
+  width: 31rem;
+  height: 10rem;
+  margin: 0 auto;
+}
+
+#name-and-id,
+#weight-and-height,
+#types {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.type {
+  width: 6rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 5%;
+  text-transform: uppercase;
+}
+
+.normal {
+  background-color: #b7b7aa;
+}
+
+.fire {
+  background-color: #ff6f52;
+}
+
+.water {
+  background-color: #42a1ff;
+}
+
+.electric {
+  background-color: #fecc33;
+}
+
+.grass {
+  background-color: #78cc55;
+}
+
+.ice {
+  background-color: #66ccfe;
+}
+
+.fighting {
+  background-color: #d3887e;
+}
+
+.poison {
+  background-color: #c68bb7;
+}
+
+.ground {
+  background-color: #dfba52;
+}
+
+.flying {
+  background-color: #8899ff;
+}
+
+.psychic {
+  background-color: #ff66a3;
+}
+
+.bug {
+  background-color: #aabb23;
+}
+
+.rock {
+  background-color: #baaa66;
+}
+
+.ghost {
+  background-color: #9995d0;
+}
+
+.dragon {
+  background-color: #9e93f1;
+}
+
+.dark {
+  background-color: #b59682;
+}
+
+.steel {
+  background-color: #abaabb;
+}
+
+.fairy {
+  background-color: #ed99ed;
+}
+
 #stats {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 1rem;
-  width: 100%;
+  width: 31rem;
+  margin: 0 auto;
 }
 
 #left-column,
@@ -87,7 +189,7 @@ input:focus {
 
 .stats-label {
   color: white;
-  background-color: rgb(22, 22, 69);
+  background-color: rgb(29, 29, 99);
   border: 0.2rem solid #000;
   border-radius: 5%;
   height: 2.5rem;
